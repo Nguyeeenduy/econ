@@ -1,0 +1,35 @@
+@import "/assets/styles/helpers/variables";
+
+.banner {
+  margin-top: 80px;
+  @media #{$media-ipad} {
+    margin-top: 60px;
+  }
+  .breadcrumb {
+    padding-top: 26px;
+    @media #{$media-ipad} {
+      margin-left: 16px;
+    }
+  }
+
+  .title {
+    text-align: center;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 48px;
+    color: #1f1f1f;
+    padding: 43px 0 103px;
+    margin: 0;
+    text-transform: uppercase;
+    @media #{$media-ipad-pro} {
+      font-size: 32px;
+      line-height: 39px;
+      padding: 35px 0 82px;
+    }
+    @media #{$media-ipad} {
+      font-size: 24px;
+      line-height: 29px;
+      padding: 27px 0 62px;
+    }
+  }
+}

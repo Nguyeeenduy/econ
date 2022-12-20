@@ -1,0 +1,38 @@
+{
+  "name": "econ101",
+  "version": "1.0.0",
+  "description": "Econ101 nest js project",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "resolutions": {
+    "autoprefixer": "10.4.5"
+  },
+  "author": "admin@econ101.vn",
+  "license": "ISC",
+  "dependencies": {
+    "autoprefixer": "10.4.5",
+    "axios": "^0.21.1",
+    "chart.js": "^4.0.1",
+    "moment": "^2.29.4",
+    "next": "^11.0.1",
+    "next-auth": "^4.18.6",
+    "postcss-flexbugs-fixes": "^5.0.2",
+    "postcss-preset-env": "^7.8.3",
+    "react": "^17.0.2",
+    "react-accessible-accordion": "^5.0.0",
+    "react-dom": "^17.0.2",
+    "react-image-lightbox": "^5.1.4",
+    "react-markdown": "^8.0.3",
+    "react-modal-video": "^1.2.10",
+    "react-slick": "^0.29.0",
+    "react-stars": "^2.2.5",
+    "react-tooltip": "^4.5.0",
+    "sass": "^1.35.2",
+    "sharp": "^0.31.2",
+    "slick-carousel": "^1.8.1"
+  }
+}

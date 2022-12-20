@@ -1,0 +1,230 @@
+@import "/assets/styles/helpers/variables";
+
+.container {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: none;
+
+  @media #{$media-ipad} {
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.08);
+    background: var(--whiteColor);
+    border-radius: 12px 12px 0px 0px;
+    display: flex;
+    flex-direction: row;
+    font-size: 14px;
+    line-height: 16px;
+    padding: 12px;
+    z-index: 99;
+
+    &Element {
+      width: 18%;
+      cursor: pointer;
+
+      &Center {
+        width: 28%;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+.imageFooter {
+  margin: auto;
+  width: 24px;
+  height: 24px;
+}
+
+.textFooter {
+  text-align: center;
+  font-size: 10px;
+  line-height: 18px;
+  margin-top: 2px;
+  color: var(--greyFooterColor);
+}
+
+.footerPosition {
+  position: relative;
+  height: 24px;
+}
+
+.footerAbsolute {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -32px;
+  width: 62px;
+  margin: 0px auto;
+  padding: 5px;
+  border-radius: 50%;
+  background: var(--whiteColor);
+  // z-index: 9;
+
+  &Background {
+    padding: 14px;
+    border-radius: 50%;
+    background: var(--green067Color);
+  }
+
+  &Image {
+    height: 24px;
+    width: 24px;
+  }
+}
+
+.menuTool {
+  position: fixed;
+  visibility: hidden;
+  width: 100%;
+  padding-top: 61px;
+  height: calc(100% - 68px);
+  top: 0;
+  left: -100vw;
+  right: 0;
+  bottom: 0;
+  background-color: var(--whiteColor);
+  transition: 0.3s;
+  z-index: 3;
+  background: var(--greyF8Color);
+  box-shadow: 0px -2px 6px rgba(0, 0, 0, 0.1);
+
+  &Active {
+    visibility: visible;
+    left: 0;
+  }
+
+  .titleTool {
+    display: flex;
+    padding: 25px 16px 12px;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+
+    &Text {
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 24px;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 16px;
+      bottom: 0;
+      height: 1px;
+      width: 48px;
+      border-bottom: 2px solid var(--green067Color);
+    }
+
+    .logo {
+      height: 24px;
+      width: 24px;
+    }
+  }
+
+  .containerTool {
+    padding: 24px 16px;
+
+    .contentTool {
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 17px;
+      color: var(--blackColor);
+      padding: 20px 0;
+      border-bottom: 1px solid var(--greyD9Color);
+
+      &:first-child {
+        padding-top: 0;
+      }
+    }
+
+    .logo {
+      height: 24px;
+      width: 24px;
+    }
+
+    &Collapse {
+      @include display-flex;
+      justify-content: space-between;
+      padding: 20px 0;
+      border-bottom: 1px solid var(--greyD9Color);
+
+      &Text {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 17px;
+        color: var(--blackColor);
+      }
+    }
+  }
+
+  .containerToolTop10 {
+    padding: 0 16px;
+
+    &Active {
+      padding: 0;
+    }
+
+    .contentToolTop10 {
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 17px;
+      color: var(--blackColor);
+      padding: 20px 0;
+      border-bottom: 1px solid var(--greyD9Color);
+
+      &:first-child {
+        padding-top: 0;
+      }
+    }
+
+    .logo {
+      height: 24px;
+      width: 24px;
+    }
+
+    &Collapse {
+      @include display-flex;
+      justify-content: space-between;
+      padding: 20px 0;
+      border-bottom: 1px solid var(--greyD9Color);
+
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 17px;
+      color: var(--blackColor);
+
+      &Active {
+        padding-left: 16px;
+        padding-right: 16px;
+        color: var(--green067Color);
+        font-weight: 700 !important;
+        border-bottom: 2px solid var(--green067Color);
+      }
+    }
+  }
+
+  .subCollapse {
+    padding: 0 32px;
+    background-color: var(--whiteColor);
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.3s;
+    max-height: 0;
+
+    &Active {
+      visibility: visible;
+      opacity: 1;
+      max-height: 100%;
+    }
+
+    &Text {
+      padding: 16px 0;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 17px;
+      color: var(--blackColor);
+    }
+  }
+}

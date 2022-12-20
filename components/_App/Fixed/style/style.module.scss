@@ -1,0 +1,38 @@
+@import "/assets/styles/helpers/variables";
+
+.container {
+  position: fixed;
+  bottom: 27px;
+  right: 27px;
+  width: 80px;
+  z-index: 999;
+  &Icon {
+    padding-top: 100%;
+    margin-bottom: 16px;
+    width: 100%;
+
+    cursor: pointer;
+  }
+  @media #{$media-fullhd} {
+    width: 60px;
+  }
+  @media #{$media-ipad} {
+    display: none;
+  }
+  &Number {
+    position: absolute;
+    text-align: center;
+    top: 10px;
+    right: 10px;
+    font-size: 14px;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    color: #fff;
+    background-color: var(--redColor);
+    @media #{$media-fullhd} {
+      top: 5px;
+      right: 5px;
+    }
+  }
+}

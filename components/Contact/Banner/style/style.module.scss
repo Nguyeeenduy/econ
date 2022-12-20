@@ -1,0 +1,27 @@
+@import "/assets/styles/helpers/variables";
+
+.background {
+  padding-top: 105px;
+  background-color: var(--greyE8Color);
+  @media #{$media-ipad} {
+    padding-top: 80px;
+  }
+  .titleBanner {
+    text-align: center;
+    padding: 58px 0 103px;
+    margin: 0;
+    font-size: 40px;
+    line-height: 48px;
+    text-align: center;
+    @media #{$media-fullhd} {
+      font-size: 32px;
+      line-height: 38px;
+      padding: 50px 0 80px;
+    }
+    @media #{$media-ipad} {
+      font-size: 24px;
+      line-height: 29px;
+      padding: 44px 0 62px;
+    }
+  }
+}

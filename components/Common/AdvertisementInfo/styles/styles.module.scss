@@ -1,0 +1,72 @@
+@import "/assets/styles/helpers/variables";
+
+.advertisement {
+  padding-top: 32px;
+  padding-bottom: 60px;
+  @media #{$media-ipad} {
+    padding: 0 16px 24px;
+  }
+  .containerAd {
+    padding: 24px 0;
+    background: var(--itemBgColor);
+    border: 2px solid var(--borderColor);
+    border-radius: 8px;
+    text-align: center;
+
+    @media #{$media-ipad} {
+      padding: 16px;
+    }
+
+    .title {
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 19px;
+      color: var(--blackColor);
+    }
+
+    .description {
+      font-size: 16px;
+      line-height: 19px;
+      color: var(--blackColor);
+      margin: 12px 0;
+
+      @media #{$media-ipad} {
+        text-align: left;
+      }
+    }
+
+    .button {
+      &Group {
+        @include display-flex;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+
+      &Item {
+        padding: 12.5px;
+        border-radius: 8px;
+        background-color: $basic-color;
+        color: $white-color;
+        font-size: 16px;
+        line-height: 19px;
+        cursor: pointer;
+        transition: 0.3s;
+        &:first-child {
+          margin-right: 24px;
+          @media #{$media-ipad} {
+            margin-right: 0px;
+            margin-bottom: 12px;
+          }
+        }
+        &:hover {
+          opacity: 0.9;
+        }
+
+        @media #{$media-ipad} {
+          min-width: 100% !important;
+          padding: 12px 4px;
+        }
+      }
+    }
+  }
+}

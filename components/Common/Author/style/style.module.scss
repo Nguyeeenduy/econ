@@ -1,0 +1,97 @@
+@import "/assets/styles/helpers/variables";
+.container {
+  &Author {
+    &Gap {
+      gap: 12px;
+      display: none !important;
+      margin-bottom: 24px;
+      @media #{$media-ipad} {
+        display: flex !important;
+      }
+    }
+    &ContainerText {
+      width: 33%;
+      @media #{$media-ipad} {
+        width: 100%;
+      }
+    }
+    &Title {
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 19px;
+      margin-right: 32px;
+      margin-bottom: 12px;
+    }
+
+    &Text {
+      margin-bottom: 12px;
+      font-size: 14px;
+      line-height: 17px;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    &Info {
+      padding: 18px 33px 22px;
+      margin-top: 32px;
+      background: #f8f8f8;
+      border-radius: 8px;
+      display: flex;
+      @media #{$media-ipad} {
+        margin-top: 12px;
+        margin-bottom: 24px;
+        flex-direction: column;
+        align-items: center;
+      }
+      &1 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      &2 {
+        padding-left: 34px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        @media #{$media-ipad} {
+          padding: 0;
+          align-items: center;
+        }
+      }
+      &Image {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+      }
+      &WriteBy {
+        font-size: 12px;
+        line-height: 15px;
+        margin-top: 8px;
+      }
+
+      &Name {
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 19px;
+        margin-top: 8px;
+      }
+
+      &Rating {
+        font-style: italic;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 15px;
+        margin-top: 12px;
+      }
+      &Description {
+        margin: 16px 0 0;
+        font-size: 14px;
+        line-height: 20px;
+        color: #1f1f1f;
+        @media #{$media-ipad} {
+          text-align: center;
+        }
+      }
+    }
+  }
+}

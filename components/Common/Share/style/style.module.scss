@@ -1,0 +1,44 @@
+@import "/assets/styles/helpers/variables";
+
+.container {
+  @media #{$media-ipad} {
+    display: flex;
+    align-items: center;
+  }
+  &Images {
+    @include display-flex;
+    gap: 12px;
+  }
+  &Image {
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    transition: 0.7s;
+    &:hover {
+      transform: rotate(360deg);
+      // animation: mymove 5s linear infinite;
+      // @keyframes mymove {
+      //   from {
+      //     -webkit-transform: rotate(0deg);
+      //     -moz-transform: rotate(0deg);
+      //     -ms-transform: rotate(0deg);
+      //     -o-transform: rotate(0deg);
+      //     transform: rotate(0deg);
+      //   }
+      //   to {
+      //     -webkit-transform: rotate(360deg);
+      //     -moz-transform: rotate(360deg);
+      //     -ms-transform: rotate(360deg);
+      //     -o-transform: rotate(360deg);
+      //     transform: rotate(360deg);
+      //   }
+      // }
+    }
+  }
+  &Text {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+    margin-right: 12px;
+  }
+}

@@ -1,0 +1,208 @@
+@import "/assets/styles/helpers/variables";
+
+.footer {
+  background-color: $basic-color;
+
+  .container {
+    //padding: 39px 16px 60px 16px;
+    color: $white-color;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    max-width: 1300px;
+    margin: auto;
+    display: flex;
+    flex-wrap: nowrap;
+    @media #{$media-ipad} {
+      flex-wrap: wrap;
+      padding: 0;
+    }
+    column-gap: 36px;
+    .textFooter {
+      color: $white-color;
+      margin-top: 12px;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 17px;
+      &Small {
+        font-size: 12px;
+        line-height: 15px;
+      }
+      @media #{$media-ipad} {
+        font-size: 12px;
+        line-height: 15px;
+        margin-top: 10px;
+      }
+    }
+    .logoFooter {
+      background-size: 174px;
+      max-width: 174px;
+      width: 100%;
+      height: 40px;
+      cursor: pointer;
+    }
+    &Line {
+      width: 100%;
+      height: 1px;
+      background-color: #ffffff;
+    }
+    &DownloadApp {
+      padding: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      @media #{$media-ipad} {
+        justify-content: left;
+        padding: 20px 0;
+      }
+      &Image {
+        height: 40px;
+        width: 134px;
+        margin-left: 12px;
+        cursor: pointer;
+      }
+      &Text {
+        font-size: 16px;
+        line-height: 19px;
+        color: #ffffff;
+        @media #{$media-ipad} {
+          width: 100%;
+          font-weight: 700;
+          font-size: 14px;
+          line-height: 17px;
+        }
+      }
+    }
+    &Element {
+      width: 100%;
+      @media #{$media-ipad} {
+        margin-bottom: 20px;
+        padding: 0 16px;
+      }
+      &Desktop {
+        width: 100%;
+        @media #{$media-ipad} {
+          display: none;
+        }
+      }
+      &Mobile {
+        display: none;
+        @media #{$media-ipad} {
+          width: 100%;
+          display: block;
+          margin-bottom: 20px;
+        }
+      }
+      &DetailMobile {
+        transition: max-height 0.5s ease-in;
+        padding: 0 16px;
+        overflow: hidden;
+        max-height: 0;
+        &.active {
+          max-height: 500px;
+        }
+      }
+    }
+    .imageLisence {
+      margin-top: 12px;
+      width: 88px;
+      height: 44px;
+    }
+    .textContact {
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 19px;
+      margin-bottom: 12px;
+      margin-top: 36px;
+      text-transform: uppercase;
+      @media #{$media-ipad} {
+        margin-top: 0;
+      }
+    }
+    .textPlaceholder {
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 22px;
+      color: #9c9c9c;
+      border: none;
+      padding: 0 16px;
+      width: 100%;
+    }
+    .contactForm {
+      border-radius: 8px;
+      background-color: $white-color;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 5px;
+    }
+    .titleMobile {
+      padding: 12px 16px;
+      display: flex;
+      justify-content: space-between;
+      cursor: pointer;
+      border-bottom: 1px solid #ffffff;
+    }
+    .imageDown {
+      width: 16px;
+      height: 16px;
+      transition: 0.3s;
+    }
+    .logoTelegram {
+      width: 18px;
+      height: 18px;
+    }
+    .logoContact {
+      width: 22px;
+      height: 20px;
+      margin-right: 18px;
+    }
+    .buttonSubmit {
+      padding: 13px;
+      background-color: $basic-color;
+      border-radius: 8px;
+      border: none;
+      &:hover {
+        opacity: 0.9;
+      }
+    }
+    &Title {
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 19px;
+      @media #{$media-ipad} {
+        font-size: 14px;
+        line-height: 17px;
+      }
+      &Small {
+        font-size: 14px;
+        line-height: 17px;
+      }
+    }
+    &Copyright {
+      width: 100%;
+      background-color: #07573f;
+      @media #{$media-ipad} {
+        margin-bottom: 68px;
+      }
+    }
+  }
+}
+
+.copyright {
+  width: 100%;
+  text-align: center;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  margin-bottom: 0;
+  color: $white-color;
+  padding: 21px 0;
+}
+
+.onMobile {
+  display: none !important;
+  @media #{$media-ipad} {
+    display: flex !important;
+  }
+}

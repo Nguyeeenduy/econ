@@ -1,0 +1,200 @@
+@import "/assets/styles/helpers/variables";
+
+.container {
+  background-color: var(--whiteColor);
+  padding-top: 105px;
+  padding-bottom: 46px;
+  @media #{$media-ipad} {
+    padding: 80px 16px 20px;
+  }
+  &Title {
+    margin-top: 32px;
+    margin-bottom: 24px;
+    font-size: 32px;
+    line-height: 39px;
+    color: var(--black0color);
+    @media #{$media-fullhd} {
+      margin-top: 27px;
+      margin-bottom: 20px;
+      font-size: 28px;
+      line-height: 34px;
+    }
+    @media #{$media-ipad} {
+      font-size: 24px;
+      line-height: 29px;
+      margin: 16px 0;
+    }
+  }
+  &Text {
+    font-size: 16px;
+    line-height: 24px;
+    color: var(--greyColor);
+    &Time {
+      font-size: 16px;
+      line-height: 24px;
+      color: var(--greyColor);
+      padding-bottom: 24px;
+      @media #{$media-ipad} {
+        padding-bottom: 16px;
+      }
+    }
+    &Source {
+      font-style: italic;
+      font-size: 14px;
+      line-height: 17px;
+      color: var(--blackColor);
+      padding-top: 24px;
+      @media #{$media-ipad} {
+        padding-top: 16px;
+      }
+    }
+  }
+
+  &Menu {
+    @include display-flex;
+    flex-wrap: nowrap;
+    background: var(--whiteColor);
+    border: 1px solid var(--greyE8Color);
+    border-radius: 8px;
+    padding: 12px;
+    margin-bottom: 53px;
+    @media #{$media-ipad} {
+      flex-wrap: wrap;
+      margin-bottom: 20px;
+    }
+    &Select {
+      position: relative;
+      width: 75%;
+      background: var(--greyF0Color);
+      margin-right: 12px;
+      border-radius: 8px;
+      cursor: pointer;
+      @media #{$media-ipad} {
+        width: 100%;
+      }
+      &Button {
+        @include display-flex;
+        justify-content: space-between;
+        padding: 18.5px 16px;
+        @media #{$media-ipad} {
+          padding: 15.5px 16px;
+        }
+      }
+      &Text {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
+        font-size: 16px;
+        line-height: 24px;
+        color: var(--greyColor);
+        @media #{$media-ipad} {
+          font-size: 14px;
+        }
+      }
+      &Icon {
+        width: 24px;
+        height: 24px;
+      }
+    }
+    &Button {
+      width: 25%;
+      text-align: center;
+      padding: 18.5px 16px;
+      border-radius: 8px;
+      background-color: var(--greenColor);
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 19px;
+      text-align: center;
+      color: var(--whiteColor);
+      &:hover {
+        opacity: 0.9;
+      }
+      @media #{$media-ipad} {
+        width: 100%;
+        font-size: 14px;
+        padding: 15.5px 16px;
+      }
+    }
+  }
+  &Table {
+    width: 100%;
+    text-align: center;
+    font-size: 16px;
+    line-height: 19px;
+    @media #{$media-ipad} {
+      font-size: 14px;
+      line-height: 17px;
+    }
+    th {
+      padding: 18.5px;
+      border: 1px solid var(--whiteColor);
+      background-color: var(--greenColor);
+      font-weight: 500;
+      text-align: center;
+      color: var(--whiteColor);
+      @media #{$media-ipad} {
+        padding: 11.5px 9.5px;
+      }
+      &:first-child {
+        border-radius: 8px 0px 0px 0px;
+      }
+      &:last-child {
+        border-radius: 0px 8px 0px 0px;
+      }
+    }
+    td {
+      padding: 18.5px;
+      @media #{$media-ipad} {
+        padding: 11.5px 9.5px;
+        border: 1px solid var(--greyD9Color);
+      }
+    }
+    &Icon {
+      width: 25px;
+      height: 25px;
+      margin: auto;
+    }
+    tr {
+      &:nth-child(odd) {
+        background-color: var(--greyF0Color);
+      }
+      &:nth-child(even) {
+        background-color: var(--whiteColor);
+      }
+    }
+  }
+  &SeeMore {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 75px;
+    border-radius: 8px;
+    background: var(--whiteColor);
+    overflow: hidden;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    z-index: 1;
+    @media #{$media-ipad} {
+      top: 60px;
+    }
+    &Element {
+      display: block;
+      color: var(--greyColor);
+      padding: 14.5px;
+      border-bottom: 1px solid #f0f0f0;
+      font-weight: 400;
+      transition: 0.3s;
+      &:last-child {
+        border-bottom: none;
+      }
+      &:hover {
+        background-color: $basic-color;
+        color: var(--whiteColor);
+        font-weight: 700;
+      }
+    }
+  }
+}

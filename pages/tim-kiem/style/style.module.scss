@@ -1,0 +1,169 @@
+@import "/assets/styles/helpers/variables";
+
+.container {
+  @media #{$media-ipad} {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+  &Mobile {
+    display: none;
+    @media #{$media-ipad} {
+      display: block;
+    }
+    &Search {
+      @include display-flex;
+      align-items: center;
+      padding: 12px 16px;
+      background: #ffffff;
+      border: 1px solid var(--greyD9Color);
+      border-radius: 8px;
+      &Image {
+        min-width: 24px;
+        height: 24px;
+        margin-right: 10px;
+      }
+    }
+    &Input {
+      border: none;
+      font-size: 14px;
+      line-height: 17px;
+      flex: 1;
+      color: var(--greyColor);
+    }
+    &Button {
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 19px;
+      border-radius: 8px;
+      margin-top: 16px;
+      border: none;
+      color: var(--whiteColor);
+      background-color: var(--greenColor);
+      padding: 14.5px;
+      width: 100%;
+    }
+  }
+  &Banner {
+    padding-top: 105px;
+    padding-left: 16px;
+    padding-right: 16px;
+    @media #{$media-ipad} {
+      padding-top: 80px;
+      background-color: var(--greyF8Color);
+    }
+  }
+  &Search {
+    padding: 32px 0 79px;
+    @media #{$media-ipad} {
+      padding: 16px 0 59px;
+    }
+    &Result {
+      padding-bottom: 32px;
+      @media #{$media-ipad} {
+        padding-bottom: 16px;
+      }
+      &Title {
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 24px;
+        margin-bottom: 8px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
+        cursor: pointer;
+        @media #{$media-ipad} {
+          -webkit-line-clamp: 2;
+          font-size: 16px;
+          line-height: 19px;
+        }
+        &:hover {
+          text-decoration: underline;
+          color: #067655;
+        }
+      }
+      &SubTitle {
+        font-size: 16px;
+        line-height: 19px;
+        color: var(--greyColor);
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
+        @media #{$media-ipad} {
+          -webkit-line-clamp: 2;
+          font-size: 14px;
+          line-height: 17px;
+        }
+      }
+    }
+    &Empty {
+      padding: 32px 0 79px;
+      font-weight: 600;
+      font-size: 20px;
+      line-height: 24px;
+      @media #{$media-ipad} {
+        padding: 16px 0 59px;
+        font-size: 16px;
+        line-height: 19px;
+      }
+    }
+  }
+  &Title {
+    margin-bottom: 22px;
+    font-size: 24px;
+    line-height: 29px;
+    @media #{$media-ipad} {
+      font-size: 20px;
+      line-height: 24px;
+      color: var(--greyColor);
+    }
+  }
+  &Head {
+    font-size: 32px;
+    line-height: 39px;
+    margin-top: 32px;
+    margin-bottom: 0;
+    color: var(--black0Color);
+    @media #{$media-fullhd} {
+      font-size: 28px;
+      line-height: 34px;
+      margin-top: 26px;
+    }
+  }
+  &Text {
+    font-size: 16px;
+    line-height: 19px;
+    padding: 24px 0;
+    color: var(--blackColor);
+    @media #{$media-ipad} {
+      font-size: 14px;
+      line-height: 17px;
+      padding: 16px 0 19px;
+    }
+  }
+  &Scroll {
+    position: absolute;
+    top: -204px;
+    bottom: 204px;
+    @media #{$media-ipad} {
+      top: -166px;
+      bottom: 166px;
+    }
+  }
+}
+.btnSeeMore {
+  margin-top: 10px;
+  font-weight: 400;
+  text-align: center;
+  color: #067655;
+  cursor: pointer;
+  font-size: 16px;
+  line-height: 22px;
+  transition: 0.3s;
+  &:hover {
+    font-size: 18px;
+  }
+}

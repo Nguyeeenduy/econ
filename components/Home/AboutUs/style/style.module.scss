@@ -1,0 +1,244 @@
+@import "/assets/styles/helpers/variables";
+
+.backgroundAbout {
+  width: 100%;
+}
+.container {
+  width: 100%;
+  margin: auto;
+  top: 0;
+
+  &About {
+    .wrapper {
+      &About {
+        @media #{$media-ipad} {
+          justify-content: center;
+        }
+      }
+      &Line {
+        &Left {
+          margin-right: 16px;
+          width: 34px;
+          height: 2px;
+          background-color: $basic-color;
+          @media #{$media-ipad} {
+            width: 20px;
+            height: 1px;
+          }
+        }
+        &Right {
+          margin-left: 16px;
+          width: 34px;
+          height: 2px;
+          background-color: $basic-color;
+          @media #{$media-ipad} {
+            width: 20px;
+            height: 1px;
+          }
+        }
+      }
+      &Title {
+        font-family: "Raleway";
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 23px;
+        color: $basic-color;
+        @media #{$media-ipad} {
+          font-size: 14px;
+          line-height: 16px;
+          letter-spacing: 0.16em;
+        }
+      }
+      &Text {
+        font-family: "Raleway";
+        max-width: 65%;
+        font-weight: 700;
+        font-size: 40px;
+        line-height: 47px;
+        margin-top: 19px;
+        margin-bottom: 29px;
+        @media #{$media-tablet-horizontal} {
+          max-width: 80%;
+        }
+        @media #{$media-ipad} {
+          font-size: 24px;
+          line-height: 28px;
+          justify-content: center;
+          max-width: 100%;
+        }
+      }
+    }
+    &Full {
+      align-items: center;
+      flex-wrap: nowrap;
+      padding: 91px 0;
+      @media #{$media-fullhd} {
+        padding: 80px 0;
+      }
+      position: relative;
+      @media #{$media-ipad} {
+        flex-wrap: wrap;
+        padding: 34px 0 24px;
+      }
+    }
+    &Dot{
+      position: absolute;
+      width: 64px;
+      height: 64px;
+      background: linear-gradient(180deg, #444444 0%, #262626 96.87%), #262626;
+      border-radius: 50%;
+      left: -86px;
+      top: 40%;
+    }
+    &Left {
+      width: 50%;
+      margin-right: 32px;
+      box-sizing: border-box;
+      @media #{$media-ipad} {
+        width: 100%;
+        margin: 0 16px 34px 16px;
+      }
+      &Image {
+        width: 100%;
+        padding-top: 104.3478260869565%;
+        border-radius: 8px;
+      }
+      &Text {
+        padding: 24px;
+      }
+      &Title {
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 24px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+      }
+      &Description {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 17px;
+        margin-top: 16px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+      }
+      &SeeDetail {
+        margin-top: 50px;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 19px;
+        color: #067655;
+        cursor: pointer;
+      }
+    }
+
+    &Right {
+      width: 50%;
+      @media #{$media-ipad} {
+        width: 100%;
+        padding: 0 16px;
+      }
+      &Wrapper {
+        font-family: 'Open Sans';
+        font-size: 16px;
+        line-height: 22px;
+        color: var(--subContentColor);
+        @media #{$media-ipad} {
+          font-size: 14px;
+          line-height: 19px;
+        }
+      }
+      &ContainerImage {
+        width: 80px;
+        margin-right: 26px;
+        @media #{$media-ipad} {
+          margin-right: 12px;
+        }
+      }
+      &Image {
+        width: 100%;
+        min-width: 80px;
+        min-height: 80px;
+        padding-top: 100%;
+        border-radius: 8px;
+        @media #{$media-fullhd} {
+          min-width: 72px;
+          min-height: 72px;
+        }
+      }
+      &Text {
+        font-family: 'Open Sans';
+        margin-bottom: 12px;
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 27px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
+        @media #{$media-fullhd} {
+          margin-bottom: 8px;
+          font-size: 18px;
+        }
+        @media #{$media-ipad} {
+          -webkit-line-clamp: 3;
+          font-size: 14px;
+          line-height: 19px;
+        }
+      }
+      &Describe {
+        font-family: 'Open Sans';
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 22px;
+        color: var(--subContentColor);
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        @media #{$media-fullhd} {
+          font-size: 16px;
+        }
+        @media #{$media-ipad} {
+          -webkit-line-clamp: 10;
+          font-size: 14px;
+          line-height: 19px;
+        }
+      }
+      &Element {
+        align-items: center;
+        margin-top: 32px;
+      }
+    }
+    &Date {
+      font-style: italic;
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 15px;
+      color: var(--subContentColor);
+      margin-top: 16px;
+    }
+  }
+}
+.buttonSeeMoreAbout {
+  margin-top: 41px;
+  font-weight: 600;
+  color: #067655;
+  cursor: pointer;
+  font-size: 16px;
+  line-height: 22px;
+  @media #{$media-ipad} {
+    margin-top: 34px;
+    text-align: center;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 19px;
+  }
+}

@@ -1,0 +1,137 @@
+@import "/assets/styles/helpers/variables";
+
+.mileStoneIntroduce {
+  .mileStone {
+    &Container {
+      padding: 81px 0 121px;
+
+      @media #{$media-ipad} {
+        padding: 36px 0px 49px;
+      }
+    }
+
+    &Header {
+      &Bar {
+        width: 34px;
+        height: 0px;
+        border: 1px solid #067655;
+      }
+
+      &Intro {
+        @include display-flex;
+        align-items: center;
+        justify-content: center;
+
+        span {
+          padding: 0 16px;
+          font-weight: 600;
+          font-size: 20px;
+          line-height: 23px;
+          letter-spacing: 0.16em;
+          color: $basic-color;
+          text-transform: uppercase;
+
+          @media #{$media-ipad} {
+            font-size: 14px;
+            line-height: 16px;
+          }
+        }
+      }
+
+      &Title {
+        text-align: center;
+        margin-top: 16px;
+        margin-bottom: 80px;
+        font-weight: 700;
+        font-size: 40px;
+        line-height: 48px;
+        color: var(--blackColor);
+
+        @media #{$media-ipad} {
+          font-size: 24px;
+          line-height: 29px;
+          margin-bottom: 31px;
+        }
+      }
+    }
+
+    &Body {
+      @include display-flex;
+      overflow-x: auto;
+
+      &Item {
+        width: 20%;
+        text-align: center;
+        min-width: 200px;
+
+        @media #{$media-ipad} {
+          width: 100%;
+          min-width: 183px;
+        }
+
+        &Time {
+          font-weight: 700;
+          font-size: 20px;
+          line-height: 24px;
+          color: var(--blackColor);
+          padding: 0 8px;
+
+          @media #{$media-ipad} {
+            font-size: 16px;
+            line-height: 19px;
+          }
+        }
+
+        &Dot {
+          padding: 16px 0;
+          position: relative;
+
+          &Center {
+            width: 24px;
+            height: 24px;
+            background-color: $basic-color;
+            border-radius: 50%;
+            margin: auto;
+          }
+
+          &Left {
+            width: calc(50% - 12px);
+            height: 4px;
+            background-color: #00cc90;
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+          }
+
+          &Right {
+            width: calc(50% - 12px);
+            height: 4px;
+            background-color: #00cc90;
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+          }
+        }
+
+        &Description {
+          padding: 0 32px;
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 19px;
+          text-align: center;
+          color: var(--subContentColor);
+          text-align: center;
+          display: inline-block;
+
+          @media #{$media-ipad} {
+            font-size: 14px;
+            line-height: 17px;
+            padding: 0 12px;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,25 @@
+@import "/assets/styles/helpers/variables";
+
+.container {
+  background-color: var(--itemBgColor);
+  &Desktop {
+    width: 100%;
+    margin: auto;
+    @media #{$media-ipad} {
+      display: none;
+    }
+    &Image {
+      padding-top: 36.51515151515152%;
+    }
+  }
+  &Mobile {
+    padding: 0 16px;
+    display: none;
+    @media #{$media-ipad} {
+      display: block;
+    }
+    &Image {
+      padding-top: 84.25655976676385%;
+    }
+  }
+}

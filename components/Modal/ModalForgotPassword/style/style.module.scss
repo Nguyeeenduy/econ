@@ -1,0 +1,204 @@
+@import "/assets/styles/helpers/variables";
+
+.closeModal {
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  @media #{$media-ipad} {
+    display: none;
+  }
+}
+.container {
+  transform: translate(-50%, -50%) scale(1);
+  -webkit-transform: translate(-50%, -50%) scale(1);
+  -moz-transform: translate(-50%, -50%) scale(1);
+  -ms-transform: translate(-50%, -50%) scale(1);
+  -o-transform: translate(-50%, -50%) scale(1);
+  position: fixed;
+  z-index: 1001;
+  top: 50%;
+  left: 50%;
+  transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -ms-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  width: 483px;
+  background-color: var(--whiteColor);
+  border-radius: 8px;
+  @media #{$media-ipad} {
+    border-radius: 0;
+    transform: none;
+    width: 100%;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    bottom: 0;
+  }
+  &Title {
+    text-align: center;
+    font-size: 20px;
+    line-height: 24px;
+    color: var(--black0Color);
+    padding: 24px;
+    border-bottom: 1px solid var(--greyF0Color);
+    margin-bottom: 0;
+    @media #{$media-ipad} {
+      padding-bottom: 0;
+      border: none;
+    }
+  }
+  &Close {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    padding: 9px;
+    border: 1px solid var(--greenColor);
+    border-radius: 50%;
+    cursor: pointer;
+    @media #{$media-ipad} {
+      display: none;
+    }
+  }
+  &Form {
+    padding: 24px 54px 46px;
+    @media #{$media-ipad} {
+      padding: 16px 30px;
+    }
+    &Head {
+      @include display-flex;
+      justify-content: space-between;
+      margin-bottom: 12px;
+      @media #{$media-ipad} {
+        margin-bottom: 14px;
+      }
+      &Text {
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 19px;
+        color: var(--black0Color);
+        @media #{$media-ipad} {
+          font-size: 14px;
+          line-height: 17px;
+        }
+      }
+      &Button {
+        background: transparent;
+        border: none;
+        font-size: 12px;
+        color: var(--black0Color);
+        padding: 0;
+      }
+    }
+    &Element {
+      @include display-flex;
+      background-color: var(--greyF5Color);
+      border-radius: 4px;
+      border: 1px solid var(--greyD9Color);
+      padding: 14px 12px;
+      margin-bottom: 16px;
+      align-items: center;
+      &Text {
+        font-size: 16px;
+        line-height: 20px;
+        margin-right: 10px;
+      }
+    }
+    &Input {
+      &Phone {
+        background: transparent;
+        width: 100%;
+        border: none;
+        border-left: 1px solid var(--greyD9Color);
+        font-size: 16px;
+        line-height: 20px;
+        &::placeholder {
+          color: var(--greyBFColor);
+        }
+        padding-left: 10px;
+      }
+      &Email {
+        background: transparent;
+        width: 100%;
+        border: none;
+        font-size: 16px;
+        line-height: 20px;
+        &::placeholder {
+          color: var(--greyD9Color);
+        }
+      }
+    }
+    &Forgot {
+      background: transparent;
+      border: none;
+      padding: 0 0 24px 0;
+      display: block;
+      font-size: 12px;
+      line-height: 15px;
+      color: var(--black0Color);
+      @media #{$media-ipad} {
+        padding: 0 0 16px 0;
+      }
+    }
+    &Login {
+      width: 100%;
+      border: none;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 19px;
+      padding: 14.5px;
+      border-radius: 8px;
+      color: var(--whiteColor);
+      background: var(--greenColor);
+    }
+  }
+  &Error {
+    color: red;
+    padding-top: 10px;
+  }
+  &Image {
+    position: relative;
+    width: 20px;
+    height: 20px;
+    &Back {
+      display: none;
+      margin-top: 75px;
+      margin-left: 16px;
+      position: relative;
+      width: 24px;
+      height: 24px;
+      @media #{$media-ipad} {
+        display: block;
+      }
+    }
+  }
+  &Text {
+    display: none;
+    justify-content: center;
+    margin-top: 40px;
+    font-size: 14px;
+    line-height: 17px;
+    @media #{$media-ipad} {
+      @include display-flex;
+      margin-top: 16px;
+    }
+    &Left {
+      font-weight: 400;
+      color: var(--greyColor);
+    }
+    &Right {
+      font-weight: 700;
+      color: var(--greenColor);
+      cursor: pointer;
+      margin-left: 5px;
+    }
+  }
+  &SendCode {
+    padding: 14px 12px;
+    border-left: 1px solid var(--greyD9Color);
+  }
+}

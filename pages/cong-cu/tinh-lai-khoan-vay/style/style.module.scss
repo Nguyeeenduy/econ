@@ -1,0 +1,618 @@
+@import "/assets/styles/helpers/variables";
+
+.container {
+  background-color: var(--whiteColor);
+  padding-top: 105px;
+  padding-bottom: 46px;
+  @media #{$media-ipad} {
+    padding: 80px 16px 20px;
+  }
+  &Title {
+    margin-top: 32px;
+    margin-bottom: 24px;
+    font-size: 32px;
+    line-height: 39px;
+    color: var(--black0color);
+    @media #{$media-fullhd} {
+      margin-top: 27px;
+      margin-bottom: 20px;
+      font-size: 28px;
+      line-height: 34px;
+    }
+    @media #{$media-ipad} {
+      font-size: 24px;
+      line-height: 29px;
+      margin: 16px 0;
+    }
+  }
+  &Text {
+    font-size: 16px;
+    line-height: 24px;
+    color: var(--greyColor);
+    &Time {
+      font-size: 16px;
+      line-height: 24px;
+      color: var(--greyColor);
+      padding-bottom: 24px;
+      @media #{$media-ipad} {
+        padding-bottom: 16px;
+      }
+    }
+    &Result {
+      font-size: 32px;
+      line-height: 39px;
+      margin: 32px 0;
+      text-align: center;
+      @media #{$media-ipad} {
+        margin-top: 20px;
+        font-size: 24px;
+        line-height: 29px;
+      }
+    }
+    &Find {
+      font-size: 32px;
+      line-height: 39px;
+      color: var(--black0color);
+      text-align: center;
+      margin-top: 60px;
+      margin-bottom: 33px;
+    }
+  }
+  &Input {
+    border: 2px solid var(--greyE8Color);
+    border-radius: 8px;
+    margin-top: 32px;
+    @include display-flex;
+    align-items: center;
+    @media #{$media-tablet-vertical} {
+      flex-wrap: wrap;
+      border: none;
+      border-radius: 0;
+    }
+    @media #{$media-ipad} {
+      margin-top: 16px;
+    }
+    &Left {
+      padding: 35px 24px;
+      width: 50%;
+      background-color: var(--greyE8Color);
+      @media #{$media-tablet-vertical} {
+        border: 2px solid var(--greyE8Color);
+        border-radius: 8px;
+        width: 100%;
+      }
+      @media #{$media-ipad} {
+        padding: 16px;
+      }
+      &Element {
+        position: relative;
+        @include display-flex;
+        flex-wrap: nowrap;
+        @media #{$media-tablet-vertical} {
+          flex-wrap: wrap;
+        }
+      }
+      &Title {
+        font-size: 14px;
+        line-height: 17px;
+        color: var(--blackColor);
+        &:first-child {
+          @media #{$media-ipad} {
+            width: 100%;
+            margin-bottom: 13px;
+          }
+        }
+        &:last-child {
+          @media #{$media-ipad} {
+            position: absolute;
+            right: 0;
+            bottom: 5px;
+          }
+        }
+      }
+      &Money {
+        border: none;
+        border-bottom: 2px dashed #d9d9d9;
+        flex: 1;
+        display: block;
+        margin: auto;
+        background: transparent;
+        text-align: center;
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 22px;
+        color: var(--blackColor);
+        @media #{$media-ipad} {
+          text-align: left;
+          font-size: 16px;
+          line-height: 19px;
+        }
+      }
+      &Line {
+        position: relative;
+        margin-top: 16px;
+        margin-bottom: 32px;
+        @media #{$media-ipad} {
+          margin-top: 12px;
+          margin-bottom: 16px;
+        }
+        &NotActive {
+          position: absolute;
+          width: 100%;
+          height: 8px;
+          top: 10px;
+          background: var(--greyD9Color);
+          border-radius: 8px;
+        }
+        &Active {
+          position: absolute;
+          height: 8px;
+          top: 10px;
+          background: var(--greenColor);
+          border-radius: 8px;
+        }
+      }
+      &Ranger {
+        position: relative;
+        display: block;
+        appearance: none;
+        width: 100%;
+        height: 28px;
+        cursor: pointer;
+        background: transparent;
+        border-radius: 8px;
+        z-index: 2;
+        &:focus {
+          outline: none;
+        }
+        &::-webkit-slider-thumb {
+          position: relative;
+          appearance: none;
+          height: 28px;
+          width: 28px;
+          background-color: var(--whiteColor);
+          border-radius: 100%;
+          border: 7px solid var(--greenColor);
+          transition: background-color 150ms;
+          z-index: 2;
+        }
+        &::-ms-thumb {
+          appearance: none;
+          height: 36px;
+          width: 36px;
+          background: var(--greenColor);
+          border-radius: 100%;
+          border: 0;
+          transition: background-color 150ms;
+          top: 0;
+          margin: 0;
+          box-shadow: none;
+        }
+
+        &:hover,
+        &:focus {
+          &::-webkit-slider-thumb {
+            background-color: #0199ff;
+          }
+          &::-moz-range-thumb {
+            background-color: #0199ff;
+          }
+          &::-ms-thumb {
+            background-color: #0199ff;
+          }
+        }
+      }
+      &Calc {
+        font-size: 16px;
+        line-height: 19px;
+        color: var(--black0color);
+        margin-bottom: 18px;
+      }
+      &Radio {
+        @include display-flex;
+        flex-wrap: nowrap;
+        margin-bottom: 24px;
+        @media #{$media-ipad} {
+          flex-wrap: wrap;
+          margin-bottom: 16px;
+        }
+        &Element {
+          width: 100%;
+          &:first-child {
+            @media #{$media-ipad} {
+              margin-bottom: 16px;
+            }
+          }
+          [type="radio"]:checked,
+          [type="radio"]:not(:checked) {
+            position: absolute;
+            left: -9999px;
+          }
+          [type="radio"]:checked + label,
+          [type="radio"]:not(:checked) + label {
+            position: relative;
+            padding-left: 34px;
+            cursor: pointer;
+            line-height: 24px;
+            display: inline-block;
+            color: var(--black0color);
+          }
+          [type="radio"]:checked + label:before,
+          [type="radio"]:not(:checked) + label:before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 24px;
+            height: 24px;
+            border: 1px solid #ddd;
+            border-radius: 100%;
+            background: #fff;
+          }
+          [type="radio"]:checked + label:after,
+          [type="radio"]:not(:checked) + label:after {
+            content: "";
+            width: 16px;
+            height: 16px;
+            background: var(--greenColor);
+            position: absolute;
+            top: 4px;
+            left: 4px;
+            border-radius: 100%;
+            -webkit-transition: all 0.2s ease;
+            transition: all 0.2s ease;
+          }
+          [type="radio"]:not(:checked) + label:after {
+            opacity: 0;
+            -webkit-transform: scale(0);
+            transform: scale(0);
+          }
+          [type="radio"]:checked + label:after {
+            opacity: 1;
+            -webkit-transform: scale(1);
+            transform: scale(1);
+          }
+          label {
+            font-size: 16px;
+            padding-left: 10px;
+            @media #{$media-ipad} {
+              font-size: 14px;
+            }
+          }
+        }
+      }
+      &Button {
+        padding: 14.5px;
+        border: none;
+        background-color: var(--greenColor);
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 19px;
+        text-align: center;
+        display: block;
+        margin: auto;
+        color: #ffffff;
+        border-radius: 8px;
+        width: 44.11764705882353%;
+        &:hover {
+          opacity: 0.9;
+        }
+      }
+    }
+    &Right {
+      padding-left: 22px;
+      padding-right: 26px;
+      width: 50%;
+      @media #{$media-tablet-vertical} {
+        width: 100%;
+        padding: 20px 16px 0;
+      }
+      &Element {
+        @include display-flex;
+        justify-content: space-between;
+        padding-bottom: 24px;
+        margin-bottom: 24px;
+        border-bottom: 1px solid var(--greyD9Color);
+        align-items: center;
+        &:last-child {
+          margin-bottom: 0;
+          border-bottom: none;
+        }
+        &Title {
+          font-size: 16px;
+          line-height: 24px;
+          color: var(--blackColor);
+        }
+        &Value {
+          font-weight: 700;
+          font-size: 20px;
+          line-height: 24px;
+          text-align: right;
+          color: var(--blackColor);
+        }
+      }
+    }
+  }
+  &Table {
+    width: 100%;
+    text-align: center;
+    font-size: 16px;
+    line-height: 19px;
+    margin-top: 60px;
+    @media #{$media-ipad} {
+      font-size: 14px;
+      line-height: 17px;
+    }
+    th {
+      padding: 18.5px;
+      border: 1px solid var(--whiteColor);
+      background-color: var(--greenColor);
+      font-weight: 500;
+      text-align: center;
+      color: var(--whiteColor);
+      @media #{$media-ipad} {
+        padding: 11.5px 9.5px;
+      }
+      &:first-child {
+        border-radius: 8px 0px 0px 0px;
+      }
+      &:last-child {
+        border-radius: 0px 8px 0px 0px;
+      }
+    }
+    td {
+      padding: 18.5px;
+      @media #{$media-ipad} {
+        padding: 11.5px 9.5px;
+        border: 1px solid var(--greyD9Color);
+      }
+    }
+    &Icon {
+      width: 25px;
+      height: 25px;
+      margin: auto;
+    }
+    tr {
+      &:nth-child(odd) {
+        background-color: var(--greyF0Color);
+      }
+      &:nth-child(even) {
+        background-color: var(--whiteColor);
+      }
+    }
+  }
+  &TableNew {
+    width: 100%;
+    text-align: center;
+    font-size: 16px;
+    line-height: 19px;
+    @media #{$media-ipad} {
+      font-size: 14px;
+      line-height: 17px;
+    }
+    th {
+      padding: 18.5px;
+      border: 1px solid var(--whiteColor);
+      background-color: var(--greenColor);
+      font-weight: 500;
+      text-align: center;
+      color: var(--whiteColor);
+      @media #{$media-ipad} {
+        padding: 11.5px 9.5px;
+      }
+      &:first-child {
+        border-radius: 8px 0px 0px 0px;
+      }
+      &:last-child {
+        border-radius: 0px 8px 0px 0px;
+      }
+    }
+    td {
+      padding: 20px;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 19px;
+      color: var(--black0color);
+      @media #{$media-ipad} {
+        padding: 11.5px 9.5px;
+        // border: 1px solid var(--greyD9Color);
+      }
+    }
+    &Icon {
+      width: 25px;
+      height: 25px;
+      margin: auto;
+    }
+    &Grey {
+      background-color: var(--greyF0Color);
+    }
+    &White {
+      background-color: var(--whiteColor);
+    }
+    &Mobile {
+      display: none;
+      @media #{$media-ipad} {
+        display: table-row;
+      }
+    }
+    &Button {
+      display: block;
+      font-weight: 700;
+      text-align: center;
+      color: var(--greenColor);
+      padding: 14.5px;
+      border: 1px solid #067655;
+      border-radius: 8px;
+      background-color: var(--whiteColor);
+      cursor: pointer;
+      &:hover {
+        color: var(--whiteColor);
+        background-color: var(--greenColor);
+      }
+    }
+    &Image {
+      height: 50px;
+    }
+    &Border {
+      @media #{$media-ipad} {
+        border-radius: 0px 8px 0px 0px;
+      }
+    }
+  }
+  &Menu {
+    @include display-flex;
+    flex-wrap: nowrap;
+    background: var(--whiteColor);
+    border: 1px solid var(--greyE8Color);
+    border-radius: 8px;
+    padding: 12px;
+    margin-bottom: 24px;
+    @media #{$media-tablet-vertical} {
+      flex-wrap: wrap;
+      margin-bottom: 20px;
+    }
+    &Select {
+      position: relative;
+      width: 100%;
+      margin-right: 12px;
+      background: var(--greyF0Color);
+
+      border-radius: 8px;
+      cursor: pointer;
+      @media #{$media-tablet-vertical} {
+        margin-right: 0;
+        margin-bottom: 12px;
+      }
+      &Button {
+        @include display-flex;
+        justify-content: space-between;
+        padding: 18.5px 16px;
+        @media #{$media-ipad} {
+          padding: 15.5px 16px;
+        }
+      }
+      &Text {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
+        font-size: 16px;
+        line-height: 24px;
+        color: var(--greyColor);
+        @media #{$media-ipad} {
+          font-size: 14px;
+        }
+      }
+      &Icon {
+        width: 24px;
+        height: 24px;
+        transition: 0.3s;
+      }
+      &IconActive {
+        width: 24px;
+        height: 24px;
+        transform: rotate(-180deg);
+        transition: 0.3s;
+      }
+      &Input {
+        width: 100%;
+        background: transparent;
+        border: none;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
+        font-size: 16px;
+        line-height: 24px;
+        color: var(--greyColor);
+        @media #{$media-ipad} {
+          font-size: 14px;
+        }
+        &::placeholder {
+          color: var(--greyColor);
+          opacity: 1;
+        }
+      }
+    }
+    &Button {
+      width: 100%;
+      text-align: center;
+      padding: 18.5px 16px;
+      border-radius: 8px;
+      background-color: var(--greenColor);
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 19px;
+      text-align: center;
+      color: var(--whiteColor);
+      cursor: pointer;
+      &:hover {
+        opacity: 0.9;
+      }
+      @media #{$media-ipad} {
+        font-size: 14px;
+        padding: 15.5px 16px;
+      }
+    }
+  }
+  &SeeMore {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 75px;
+    border-radius: 8px;
+    background: var(--whiteColor);
+    overflow: hidden;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    z-index: 1;
+    @media #{$media-ipad} {
+      top: 60px;
+    }
+    &Element {
+      display: block;
+      color: var(--greyColor);
+      padding: 14.5px;
+      border-bottom: 1px solid #f0f0f0;
+      font-weight: 400;
+      transition: 0.3s;
+      &:last-child {
+        border-bottom: none;
+      }
+      &:hover {
+        background-color: $basic-color;
+        color: var(--whiteColor);
+        font-weight: 700;
+      }
+    }
+  }
+  &Pagination {
+    padding-top: 33px;
+    @include display-flex;
+    justify-content: flex-end;
+    @media #{$media-ipad} {
+      padding-top: 20px;
+      justify-content: center;
+    }
+  }
+  &Mobile {
+    display: none;
+    padding-top: 20px;
+    @media #{$media-ipad} {
+      display: block;
+    }
+    &Element {
+      padding: 16px;
+      font-size: 14px;
+      line-height: 32px;
+      &:nth-child(odd) {
+        background-color: var(--greyF0Color);
+      }
+      &:nth-child(even) {
+        background-color: var(--whiteColor);
+      }
+    }
+  }
+}

@@ -1,0 +1,79 @@
+@import "/assets/styles/helpers/variables";
+
+.container {
+  padding: 180px 0;
+  margin: auto;
+  @media #{$media-ipad} {
+    padding: 123px 30px;
+  }
+  &Title {
+    font-size: 32px;
+    line-height: 39px;
+    text-align: center;
+    color: var(--greenColor);
+    margin-bottom: 40px;
+    @media #{$media-ipad-pro} {
+      font-size: 26px;
+      line-height: 32px;
+      margin-bottom: 28px;
+    }
+    @media #{$media-ipad} {
+      font-size: 20px;
+      line-height: 24px;
+      margin-bottom: 16px;
+    }
+  }
+  &Button {
+    width: 100%;
+    max-width: 375px;
+    margin: auto;
+    display: flex;
+    background: transparent;
+    border: 1px solid var(--greyD9Color);
+    padding: 14px 12px;
+    margin-bottom: 16px;
+    border-radius: 8px;
+    @media #{$media-ipad} {
+      margin-bottom: 12px;
+    }
+    &:hover {
+      background: var(--greyD9Color);
+    }
+    &Text {
+      flex: 1;
+      text-align: center;
+      font-size: 16px;
+      line-height: 20px;
+      @media #{$media-ipad} {
+        font-size: 14px;
+      }
+    }
+  }
+  &Image {
+    position: relative;
+    width: 20px;
+    height: 20px;
+  }
+  &Text {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+    font-size: 16px;
+    line-height: 19px;
+    @media #{$media-ipad} {
+      font-size: 14px;
+      line-height: 17px;
+      margin-top: 16px;
+    }
+    &Left {
+      font-weight: 400;
+      color: var(--greyColor);
+    }
+    &Right {
+      font-weight: 700;
+      color: var(--greenColor);
+      cursor: pointer;
+      margin-left: 5px;
+    }
+  }
+}

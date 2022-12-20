@@ -1,0 +1,544 @@
+@import "/assets/styles/helpers/variables";
+
+.container {
+  padding-top: 105px;
+  @media #{$media-ipad} {
+    padding: 80px 16px 0;
+  }
+  &Title {
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 1;
+    color: $black;
+    margin-bottom: 20px;
+    @media #{$media-fullhd} {
+      font-size: 24px;
+    }
+    @media #{$media-ipad} {
+      margin-bottom: 16px;
+    }
+  }
+  &SubTitle {
+    font-size: 16px;
+    line-height: 1.2;
+    color: $brown-dark-color;
+    margin-bottom: 32px;
+    @media #{$media-fullhd} {
+      font-size: 14px;
+      margin-bottom: 16px;
+    }
+  }
+  &Survey {
+    @include display-flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--greyE8Color);
+    border-radius: 8px;
+    padding: 8px 35px 8px 22px;
+    margin-bottom: 32px;
+    @media #{$media-ipad} {
+      flex-direction: column;
+      padding: 16px;
+      margin-bottom: 16px;
+    }
+    &Image {
+      width: 113px;
+      margin-right: 40px;
+      .image {
+        width: 100%;
+        padding-top: 92.0353982300885%;
+      }
+      @media #{$media-ipad} {
+        width: 74px;
+        margin-right: 0;
+      }
+    }
+    &Content {
+      @include display-flex;
+      align-items: center;
+      @media #{$media-ipad} {
+        flex-direction: column;
+      }
+    }
+    &Text {
+      @media #{$media-ipad} {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 12px;
+      }
+      .title {
+        font-size: 16px;
+        margin-bottom: 12px;
+      }
+      .subTitle {
+        color: var(--subContentColor);
+        // font-size: 16px;
+        line-height: 1.5;
+      }
+    }
+    &Button {
+      font-size: 16px;
+      line-height: 19px;
+      text-align: center;
+      color: #fff;
+      background: var(--greenColor);
+      border-radius: 8px;
+      padding: 12px;
+    }
+  }
+  &Credit {
+    background: var(--whiteColor);
+    border: 2px solid var(--borderColor);
+    border-radius: 8px;
+    margin-bottom: 26px;
+    .onMobile {
+      display: none;
+      margin: 0 16px 16px 16px;
+      h2 {
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 1;
+        margin-bottom: 4px;
+        cursor: pointer;
+      }
+      @media #{$media-ipad} {
+        display: block;
+      }
+      &Button {
+        display: none;
+        width: 100%;
+        @media #{$media-ipad} {
+          display: block;
+        }
+      }
+    }
+    &Head {
+      margin: 24px 32px 12px;
+      @include display-flex;
+      justify-content: space-between;
+      gap: 44px;
+      @media #{$media-ipad} {
+        margin: 16px;
+      }
+      &Text {
+        font-size: 13px;
+        line-height: 1.2;
+        color: var(--greyColor);
+        @media #{$media-ipad} {
+          font-size: 11px;
+        }
+      }
+      &Right {
+        @include display-flex;
+        align-items: center;
+      }
+      &Check {
+        width: 24px;
+        height: 24px;
+      }
+      &Text1 {
+        font-size: 16px;
+        line-height: 19px;
+        margin-left: 8px;
+        @media #{$media-ipad} {
+          display: none;
+        }
+      }
+    }
+    &Content {
+      @include display-flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      padding: 0 32px 44px;
+      @media #{$media-ipad} {
+        border-bottom: 1px solid #d9d9d9;
+        padding: 0 16px;
+      }
+      &Left {
+        width: 55.4140127388535%;
+        display: flex;
+        justify-content: space-between;
+        @media #{$media-ipad} {
+          width: 100%;
+          align-items: center;
+        }
+        &Create {
+          width: 34.05172413793103%;
+          @media #{$media-fullhd} {
+            width: 40%;
+          }
+          @media #{$media-ipad} {
+            width: 51.36054421768707%;
+          }
+          &Text {
+            font-size: 12px;
+            line-height: 15px;
+            text-align: center;
+            color: var(--greyColor);
+            margin-top: 14px;
+            @media #{$media-ipad} {
+              margin-top: 12px;
+            }
+          }
+        }
+        &Info {
+          width: 61.35057471264368%;
+          @media #{$media-fullhd} {
+            width: 55%;
+          }
+          @media #{$media-ipad} {
+            width: 45.57823129251701%;
+          }
+          h2 {
+            font-weight: 700;
+            font-size: 24px;
+            line-height: 1.2;
+            margin-bottom: 16px;
+            cursor: pointer;
+            @media #{$media-fullhd} {
+              font-size: 20px;
+            }
+          }
+          .textRating {
+            font-size: 14px;
+            line-height: 17px;
+            margin-top: 16px;
+            @media #{$media-ipad} {
+              margin-top: 0;
+            }
+          }
+          .textReview {
+            font-size: 14px;
+            line-height: 17px;
+            color: #096dd9;
+            cursor: pointer;
+          }
+        }
+      }
+      &Right {
+        width: 42.35668789808917%;
+        @media #{$media-ipad} {
+          width: 100%;
+        }
+        &Element {
+          border-bottom: 1px solid #d9d9d9;
+          padding-top: 18px;
+          padding-bottom: 16px;
+          display: flex;
+          justify-content: space-between;
+          &:last-child {
+            border: none;
+          }
+          @media #{$media-ipad} {
+            justify-content: flex-start;
+          }
+          &1 {
+            display: flex;
+            .textCriteria {
+              font-size: 16px;
+              line-height: 24px;
+              color: var(--greyColor);
+              margin-right: 8px;
+              @media #{$media-ipad} {
+                font-size: 14px;
+                margin-right: 5px;
+              }
+            }
+          }
+          &2 {
+            width: 69.73684210526316%;
+            font-size: 16px;
+            line-height: 24px;
+            font-size: 14px;
+            @media #{$media-ipad} {
+              width: fit-content;
+              margin-left: 16px;
+            }
+          }
+        }
+      }
+      &Image {
+        width: 100%;
+        cursor: pointer;
+      }
+      &Sponsor {
+        position: absolute;
+        font-size: 12px;
+        line-height: 15px;
+        text-align: center;
+        color: var(--whiteColor);
+        bottom: 5px;
+        right: 5px;
+        padding: 3px 6px;
+        background: rgba(0, 0, 0, 0.4);
+        border-radius: 8px;
+        @media #{$media-ipad} {
+          font-size: 10px;
+          line-height: 12px;
+          padding: 2px;
+        }
+      }
+      &Button {
+        padding: 12.5px;
+        background: $basic-color;
+        border-radius: 8px;
+        color: #fff;
+        text-align: center;
+        margin-top: 14px;
+        width: 100%;
+        @media #{$media-ipad} {
+          margin-top: 16px;
+          padding: 9.5px;
+        }
+      }
+    }
+    &Option {
+      padding: 16px 32px;
+      border-bottom: 1px solid #d9d9d9;
+      cursor: pointer;
+      &:last-child {
+        border: none;
+      }
+      &Content {
+        color: var(--blackColor);
+        font-size: 16px;
+        line-height: 24px;
+        @include display-flex;
+        justify-content: space-between;
+      }
+      @media #{$media-ipad} {
+        padding: 16px;
+        font-size: 14px;
+      }
+    }
+  }
+  &Checkbox {
+    @include display-flex;
+    align-items: center;
+  }
+  &ImageCredit {
+    background-size: cover;
+    border-radius: 5px;
+    width: 100%;
+    padding-top: 62.44725738396624%;
+    &Animation {
+      position: absolute;
+      z-index: 1000;
+      border-radius: 80%;
+      top: -50px;
+      right: -50px;
+      bottom: -50px;
+      left: -50px;
+      transition: 3s;
+      animation-name: example;
+      animation-duration: 3s;
+      @keyframes example {
+        0% {
+          width: 120%;
+          height: 120%;
+        }
+        100% {
+          width: 50px;
+          height: 50px;
+        }
+      }
+    }
+  }
+  &Icon {
+    gap: 12px;
+    @media #{$media-ipad} {
+      gap: 8px;
+    }
+  }
+  &NoProduct {
+    color: var(--blackColor);
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+  &Blog {
+    margin-bottom: 88px;
+    @media #{$media-ipad-pro} {
+      margin-bottom: 61px;
+    }
+    h2 {
+      font-size: 32px;
+      line-height: 39px;
+      color: var(--black0Color);
+      text-align: center;
+      padding: 18px 0 51px;
+      margin: 0;
+      @media #{$media-ipad} {
+        padding: 16px 0 22px;
+        font-size: 24px;
+        line-height: 29px;
+      }
+    }
+    &List {
+      @include display-flex;
+      flex-wrap: nowrap;
+      justify-content: space-between;
+      overflow: scroll;
+      // overflow-x: hidden;
+      @media #{$media-ipad} {
+        margin-left: 16px;
+      }
+      &::-webkit-scrollbar {
+        display: none;
+      }
+      &Element {
+        width: 23.181818181818185%;
+        min-width: 140px;
+        background: var(--whiteColor);
+        border: 2px solid var(--greyE8Color);
+        border-radius: 8px;
+        @include display-flex;
+        flex-direction: column;
+        @media #{$media-ipad-pro} {
+          width: 100%;
+          margin-right: 8px;
+        }
+
+        &:last-child {
+          @media #{$media-ipad-pro} {
+            margin-right: 16px;
+          }
+        }
+        &Image {
+          width: 100%;
+          padding-top: 75.16339869281046%;
+          @media #{$media-ipad-pro} {
+            padding-top: 100%;
+          }
+        }
+        &Content {
+          padding: 16px 12px;
+          flex: 1;
+          @media #{$media-ipad-pro} {
+            padding: 8px;
+          }
+          h3 {
+            font-size: 16px;
+            line-height: 19px;
+            color: var(--black26Color);
+            margin-bottom: 12px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            @media #{$media-ipad-pro} {
+              -webkit-line-clamp: 4;
+              font-size: 14px;
+              line-height: 17px;
+            }
+          }
+          &Info {
+            font-size: 12px;
+            line-height: 15px;
+            color: var(--greyColor);
+            margin-bottom: 12px;
+            span:first-child {
+              @media #{$media-ipad-pro} {
+                display: none;
+              }
+            }
+          }
+          p {
+            font-size: 14px;
+            line-height: 17px;
+            color: var(--black26Color);
+            margin-bottom: 12px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            @media #{$media-ipad-pro} {
+              display: none;
+            }
+          }
+          &SeeDetail {
+            font-weight: 600;
+            font-size: 14px;
+            line-height: 19px;
+            color: #067655;
+            cursor: pointer;
+            @media #{$media-ipad-pro} {
+              display: none;
+            }
+            .arrowRight {
+              border: solid #067655;
+              border-width: 0 1px 1px 0;
+              display: inline-block;
+              padding: 3px;
+              transform: rotate(-45deg);
+              -webkit-transform: rotate(-45deg);
+            }
+          }
+          &Text {
+            @include display-flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 100%;
+          }
+        }
+      }
+    }
+  }
+}
+
+.checkbox {
+  &Content {
+    line-height: 1;
+    font-size: 16px;
+    color: var(--blackColor);
+    @media #{$media-ipad} {
+      display: none;
+    }
+  }
+  &Input {
+    height: 24px;
+    margin-right: 8px;
+    @media #{$media-ipad} {
+      margin-right: 0;
+    }
+  }
+}
+
+.button {
+  &Start {
+    width: 22.0110847189232%;
+
+    @media #{$media-ipad} {
+      width: calc(100% - 32px);
+    }
+  }
+}
+.credit {
+  &Content {
+    padding-top: 0;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.3s;
+    max-height: 0;
+    &Active {
+      padding-top: 20px;
+      visibility: visible;
+      opacity: 1;
+      max-height: 100%;
+    }
+  }
+}
+
+.icon {
+  &Arrow {
+    &Content {
+      width: 24px;
+      height: 24px;
+      transition: 0.3s;
+      &Active {
+        transform: rotate(-180deg);
+      }
+    }
+  }
+}

@@ -1,0 +1,46 @@
+$media-fullhd: "only screen and (max-width : 1540px)";
+$media-tablet-horizontal: "only screen and (max-width : 1160px)";
+$media-tablet-vertical: "only screen and (max-width : 900px)";
+$media-ipad-pro: "only screen and (max-width : 1024px)";
+$media-ipad: "only screen and (max-width : 768px)";
+$media-small-phone: "only screen and (max-width : 320px)";
+
+$margin-bottom-header-media-fullhd: 42px;
+$margin-bottom-header-media-ipad-pro: 20px;
+$font-size-header-media-ipad-pro: 30px;
+
+$white-color: #ffffff;
+$lighter-blue-color: #f2f4f8;
+$light-blue-color: #ebeef4;
+$dark-blue-color: #e7eaf0;
+$black-color: #333333;
+$gray-color: #cccccc;
+$light-gray-color: #e0e1e3;
+$link-color: #8a939c;
+$light-link-color: #c2c5d4;
+$orange-color: #ee5115;
+$green-color: #328d41;
+$basic-color: #067655;
+$blue-color: #096dd9;
+$brown-dark-color: #595959;
+$black-light-color: #262626;
+$black: #000;
+$green-light: #e8f3f3;
+
+@mixin display-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -moz-box;
+  display: -moz-flex;
+  display: -webkit-flex;
+  display: flex;
+}
+
+@mixin display-flex-important {
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: -moz-box !important;
+  display: -moz-flex !important;
+  display: -webkit-flex !important;
+  display: flex !important;
+}

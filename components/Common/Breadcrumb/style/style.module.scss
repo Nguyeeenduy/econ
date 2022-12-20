@@ -1,0 +1,27 @@
+@import "/assets/styles/helpers/variables";
+.breadcrumb {
+  &Image {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+  }
+  &ImageRight {
+    width: 20px;
+    height: 20px;
+    margin: 0 8px;
+  }
+  &Text {
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 20px;
+    color: var(--greyColor);
+    cursor: pointer;
+  }
+  &TextBlack {
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 20px;
+    color: var(--black0Color);
+    cursor: pointer;
+  }
+}

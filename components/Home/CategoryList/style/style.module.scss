@@ -1,0 +1,43 @@
+@import "/assets/styles/helpers/variables";
+
+.container {
+  background-color: $white-color;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  @media #{$media-ipad} {
+    padding: 0 20px;
+  }
+
+  .title {
+    text-align: center;
+    width: fit-content;
+    margin: 0 auto;
+    font-size: 36px;
+    border-bottom: 4px solid $green-color;
+    @media #{$media-ipad} {
+      font-size: 28px;
+    }
+  }
+
+  .image {
+    padding-top: 45%;
+    width: 100%;
+
+    &ListContainer {
+      margin-top: 10px;
+      padding: 0 100px;
+      @media #{$media-ipad} {
+        padding: 0;
+      }
+    }
+
+    &Container {
+      margin: 10px;
+      width: calc((100% / 3) - 20px);
+      border: 1px solid $black-color;
+      @media #{$media-ipad} {
+        width: calc(50% - 20px);
+      }
+    }
+  }
+}

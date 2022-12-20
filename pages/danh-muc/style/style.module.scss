@@ -1,0 +1,161 @@
+@import "/assets/styles/helpers/variables";
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 59px;
+  @media #{$media-ipad} {
+    padding-top: 25px;
+  }
+  &Left {
+    width: 74.39393939393939%;
+    @media #{$media-ipad} {
+      width: 100%;
+    }
+    &Content {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 32px;
+      @media #{$media-tablet-vertical} {
+        grid-template-columns: auto auto;
+        gap: 24px;
+      }
+      @media #{$media-ipad} {
+        grid-template-columns: auto;
+        gap: 16px;
+        padding: 0 16px;
+      }
+    }
+    &SeeMore {
+      margin-top: 32px;
+      padding: 9px;
+      font-weight: 400;
+      text-align: center;
+      color: #067655;
+      cursor: pointer;
+      font-size: 16px;
+      line-height: 22px;
+      @media #{$media-ipad} {
+        margin-top: 16px;
+      }
+    }
+    &Blog {
+      box-sizing: border-box;
+      border: 2px solid var(--borderColor);
+      border-radius: 8px;
+      cursor: pointer;
+
+      &Text {
+        padding: 16px;
+      }
+
+      &Image {
+        width: 100%;
+        padding-top: 75.16339869281046%;
+        border-radius: 8px;
+      }
+
+      &Title {
+        color: var(--black26Color);
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 17px;
+        margin-bottom: 12px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 4;
+        -webkit-box-orient: vertical;
+
+        @media #{$media-ipad} {
+          font-size: 14px;
+          line-height: 17px;
+          -webkit-line-clamp: 4;
+        }
+      }
+
+      &Info {
+        @include display-flex;
+        align-items: center;
+        font-weight: 400;
+        font-size: 10px;
+        line-height: 12px;
+        color: $brown-dark-color;
+      }
+      &Time {
+        margin-right: 12px;
+      }
+
+      &Description {
+        color: var(--black26Color);
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 17px;
+        margin-top: 12px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+
+        @media #{$media-ipad} {
+          font-size: 12px;
+          line-height: 15px;
+          -webkit-line-clamp: 4;
+        }
+      }
+
+      &SeeDetail {
+        margin-top: 12px;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 19px;
+        color: #067655;
+        cursor: pointer;
+      }
+
+      &ArrowRight {
+        border: solid #067655;
+        border-width: 0 1px 1px 0;
+        display: inline-block;
+        padding: 3px;
+        transform: rotate(-45deg);
+        -webkit-transform: rotate(-45deg);
+      }
+    }
+  }
+  &Right {
+    width: 23.18181818181818%;
+    @media #{$media-ipad} {
+      display: none;
+    }
+    &Category {
+      padding: 20px;
+      background: var(--greyF8Color);
+      border-radius: 8px;
+      @media #{$media-ipad} {
+        display: none;
+      }
+    }
+
+    &Title {
+      color: var(--black26Color);
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 24px;
+    }
+    &Item {
+      font-size: 14px;
+      line-height: 17px;
+      padding: 16px 12px;
+      border-bottom: 1px solid #d9d9d9;
+      cursor: pointer;
+      &:hover {
+        color: $basic-color;
+      }
+      &:active {
+        color: $blue-color;
+      }
+    }
+  }
+}

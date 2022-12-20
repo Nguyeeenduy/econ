@@ -1,0 +1,254 @@
+@import "/assets/styles/helpers/variables";
+
+.wrapper {
+  width: 100%;
+  padding-top: 60px;
+  position: relative;
+
+  @media #{$media-ipad} {
+    padding-top: 24px;
+  }
+
+  .serviceList {
+    padding: 10px;
+    flex-wrap: wrap;
+  }
+
+  &Line {
+    width: 34px;
+    height: 2px;
+    background-color: $basic-color;
+    margin: 0 16px;
+  }
+
+  &Title {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 23px;
+    color: $basic-color;
+    @media #{$media-ipad} {
+      font-size: 14px;
+      line-height: 16px;
+    }
+  }
+
+  &Text {
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 47px;
+    margin-bottom: 32px;
+    text-align: center;
+    &Info {
+      font-size: 12px;
+      line-height: 15px;
+    }
+    @media #{$media-ipad-pro} {
+      font-size: 36px;
+      line-height: 38px;
+      margin-bottom: 24px;
+    }
+    @media #{$media-ipad} {
+      font-size: 24px;
+      line-height: 28px;
+    }
+  }
+}
+
+.serviceItem {
+  &Container {
+    box-shadow: 0px 13px 22px rgba(0, 0, 0, 0.05);
+    border-radius: 8px;
+    white-space: pre-line;
+    border-bottom: 4px solid #ffffff;
+    transition: 0.3s;
+    background: transparent;
+    cursor: pointer;
+
+    &:hover {
+      background: rgba(4, 190, 135, 0.1);
+      border-bottom: 4px solid #067655;
+    }
+  }
+
+  &Wrapper {
+    padding: 25px 10px;
+  }
+
+  &Icon {
+    width: 36px;
+    height: 36px;
+    min-width: 36px;
+  }
+
+  &Name {
+    margin-top: 10px;
+    text-transform: capitalize;
+    margin-bottom: 0;
+    text-align: center;
+    height: 30px;
+  }
+
+  &Content {
+    font-size: 11px;
+  }
+}
+
+.containerBlog {
+  box-sizing: border-box;
+  height: 100%;
+
+  @media #{$media-ipad} {
+    width: 100%;
+    // margin: 0 16px;
+  }
+
+  &Item {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    border: 2px solid var(--borderColor);
+    border-radius: 8px;
+    cursor: pointer;
+    margin: 0 8px;
+
+    @media #{$media-ipad} {
+      margin: 0 16px;
+    }
+  }
+
+  &Image {
+    width: 100%;
+    padding-top: 74.94033412887828%;
+    border-radius: 8px;
+
+    @media #{$media-ipad} {
+      height: 210px;
+    }
+  }
+
+  &Text {
+    padding: 24px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    @media #{$media-ipad} {
+      padding: 16px;
+    }
+
+    &Info {
+      font-size: 12px;
+      line-height: 15px;
+      color: $brown-dark-color;
+
+      @media #{$media-ipad} {
+        font-size: 10px;
+        line-height: 12px;
+      }
+    }
+  }
+
+  &Title {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    margin-bottom: 16px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+
+    @media #{$media-ipad} {
+      font-size: 14px;
+      line-height: 17px;
+      -webkit-line-clamp: 10;
+    }
+  }
+
+  &Description {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    margin-top: 16px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+
+    @media #{$media-ipad} {
+      font-size: 12px;
+      line-height: 15px;
+      -webkit-line-clamp: 4;
+    }
+  }
+
+  &SeeDetail {
+    @include display-flex;
+    align-items: center;
+    margin-top: 16px;
+    &Text {
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 19px;
+      color: #067655;
+      cursor: pointer;
+      margin-right: 5px;
+      transition: 1s;
+      &:hover {
+        opacity: 0.9;
+        margin-right: 10px;
+      }
+    }
+    @media #{$media-ipad} {
+      font-size: 12px;
+      line-height: 15px;
+    }
+  }
+
+  .arrowRight {
+    border: solid #067655;
+    border-width: 0 1px 1px 0;
+    display: inline-block;
+    padding: 3px;
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+  }
+}
+.containerContent {
+  padding-left: 2.5px;
+  padding-right: 2.5px;
+}
+.containerSlider {
+  margin-bottom: 54px;
+  @media #{$media-ipad} {
+    margin-bottom: 38px;
+  }
+}
+.seeMore {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  font-size: 14px;
+  line-height: 17px;
+  color: #067655;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  transition: 1s;
+  &:hover {
+    font-size: 15px;
+  }
+  @media #{$media-ipad} {
+    display: none;
+  }
+}
+.blogScroll {
+  position: absolute;
+  top: -166px;
+  bottom: 178px;
+  @media #{$media-ipad} {
+    top: -150px;
+  }
+}

@@ -1,0 +1,1437 @@
+@import "/assets/styles/helpers/variables";
+
+.head {
+  padding-top: 105px;
+  @media #{$media-ipad} {
+    padding: 80px 16px 0;
+  }
+  &Title {
+    font-size: 32px;
+    line-height: 39px;
+    color: var(--black0Color);
+    margin: 24px 0;
+    @media #{$media-ipad} {
+      margin: 20px 0;
+      font-size: 24px;
+      line-height: 29px;
+    }
+  }
+}
+.menu {
+  margin-bottom: 33px;
+  @media #{$media-ipad} {
+    padding-left: 16px;
+    margin-bottom: 20px;
+  }
+  &Container {
+    @include display-flex;
+    flex-wrap: nowrap;
+    overflow: scroll;
+    background: var(--whiteColor);
+    border: 1px solid var(--greyE8Color);
+    border-radius: 8px;
+    padding: 12px 0 12px 12px;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+
+  &Element {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    min-width: 140px;
+    width: 100%;
+    font-size: 16px;
+    line-height: 19px;
+    color: var(--greyColor);
+    padding: 18.5px;
+    background: var(--greyF0Color);
+    border-radius: 8px;
+    margin-right: 12px;
+    @media #{$media-ipad} {
+      font-size: 14px;
+      line-height: 17px;
+      height: 48px;
+      max-height: 48px;
+      padding: 7px;
+    }
+  }
+}
+.filter {
+  margin-bottom: 32px;
+  border: 1px solid var(--greyE8Color);
+  border-radius: 8px;
+  @media #{$media-ipad} {
+    margin: 0 16px 20px;
+  }
+  &Container {
+    background-color: var(--greyE8Color);
+    padding: 24px;
+    @include display-flex;
+    justify-content: space-between;
+
+    flex-wrap: wrap;
+    &Element {
+      width: 31.99685534591195%;
+      @media #{$media-fullhd} {
+        width: 48%;
+      }
+      @media #{$media-tablet-vertical} {
+        width: 100%;
+      }
+    }
+    &Button {
+      width: 31.13207547169811%;
+      @include display-flex;
+      justify-content: space-between;
+      align-items: center;
+      @media #{$media-fullhd} {
+        padding-top: 26px;
+        width: 50%;
+      }
+      @media #{$media-ipad} {
+        width: 100%;
+      }
+      &In {
+        width: 48.48484848484848%;
+        padding: 14.5px;
+        border-radius: 8px;
+        border: none;
+        background-color: var(--greenColor);
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 19px;
+        color: var(--whiteColor);
+        &:hover {
+          opacity: 0.8;
+        }
+        @media #{$media-ipad} {
+          width: 100%;
+        }
+      }
+      &Out {
+        width: 48.48484848484848%;
+        padding: 14.5px;
+        border-radius: 8px;
+        border: 1px solid var(--greenColor);
+        background: transparent;
+        font-size: 16px;
+        line-height: 19px;
+        color: var(--greenColor);
+        &:hover {
+          background-color: var(--greenColor);
+          font-weight: 700;
+          color: var(--whiteColor);
+          opacity: 0.9;
+        }
+        @media #{$media-ipad} {
+          display: none;
+        }
+      }
+    }
+    &Head {
+      position: relative;
+      @include display-flex;
+      flex-wrap: nowrap;
+      @media #{$media-tablet-vertical} {
+        flex-wrap: wrap;
+      }
+    }
+    &Title {
+      font-size: 14px;
+      line-height: 17px;
+      color: var(--blackColor);
+      &:first-child {
+        @media #{$media-ipad} {
+          width: 100%;
+          margin-bottom: 13px;
+        }
+      }
+      &:last-child {
+        @media #{$media-ipad} {
+          position: absolute;
+          right: 0;
+          bottom: 5px;
+        }
+      }
+    }
+    &Money {
+      border: none;
+      border-bottom: 2px dashed #d9d9d9;
+      flex: 1;
+      display: block;
+      margin: auto;
+      background: transparent;
+      text-align: center;
+      font-weight: 700;
+      font-size: 18px;
+      line-height: 22px;
+      color: var(--blackColor);
+      @media #{$media-ipad} {
+        text-align: left;
+        font-size: 16px;
+        line-height: 19px;
+      }
+    }
+    &Line {
+      position: relative;
+      margin-top: 16px;
+      @media #{$media-tablet-vertical} {
+        margin-top: 12px;
+        margin-bottom: 16px;
+      }
+      &NotActive {
+        position: absolute;
+        width: 100%;
+        height: 8px;
+        top: 10px;
+        background: var(--greyD9Color);
+        border-radius: 8px;
+      }
+      &Active {
+        position: absolute;
+        height: 8px;
+        top: 10px;
+        background: var(--greenColor);
+        border-radius: 8px;
+      }
+    }
+    &Ranger {
+      position: relative;
+      display: block;
+      appearance: none;
+      width: 100%;
+      height: 28px;
+      cursor: pointer;
+      background: transparent;
+      border-radius: 8px;
+      z-index: 2;
+      &:focus {
+        outline: none;
+      }
+      &::-webkit-slider-thumb {
+        position: relative;
+        appearance: none;
+        height: 28px;
+        width: 28px;
+        background-color: var(--whiteColor);
+        border-radius: 100%;
+        border: 7px solid var(--greenColor);
+        transition: background-color 150ms;
+        z-index: 2;
+      }
+
+      &::-ms-thumb {
+        appearance: none;
+        height: 36px;
+        width: 36px;
+        background: var(--greenColor);
+        border-radius: 100%;
+        border: 0;
+        transition: background-color 150ms;
+        top: 0;
+        margin: 0;
+        box-shadow: none;
+      }
+
+      &:hover,
+      &:focus {
+        &::-webkit-slider-thumb {
+          background-color: #0199ff;
+        }
+        &::-moz-range-thumb {
+          background-color: #0199ff;
+        }
+        &::-ms-thumb {
+          background-color: #0199ff;
+        }
+      }
+    }
+  }
+  &Advance {
+    @include display-flex;
+    justify-content: space-between;
+    padding: 12px 24px;
+    &Icon {
+      width: 24px;
+      height: 24px;
+    }
+  }
+}
+.survey {
+  @include display-flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--greyE8Color);
+  border-radius: 8px;
+  padding: 8px 35px 8px 22px;
+  margin-bottom: 34px;
+  @media #{$media-ipad} {
+    flex-direction: column;
+    padding: 16px;
+    margin: 0 16px 40px;
+  }
+  &Image {
+    width: 113px;
+    margin-right: 40px;
+    .image {
+      width: 100%;
+      padding-top: 92.0353982300885%;
+    }
+    @media #{$media-ipad} {
+      width: 74px;
+      margin-right: 0;
+    }
+  }
+  &Content {
+    @include display-flex;
+    align-items: center;
+    @media #{$media-ipad} {
+      flex-direction: column;
+    }
+  }
+  &Text {
+    @media #{$media-ipad} {
+      width: 100%;
+      text-align: center;
+      margin-bottom: 12px;
+    }
+    .title {
+      font-size: 16px;
+      margin-bottom: 12px;
+    }
+    .subTitle {
+      color: var(--subContentColor);
+      // font-size: 16px;
+      line-height: 1.5;
+    }
+  }
+  &Button {
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    color: #fff;
+    background: var(--greenColor);
+    border-radius: 8px;
+    padding: 12px;
+  }
+  &Start {
+    width: 22.0110847189232%;
+    @media #{$media-ipad} {
+      width: 81.04956268221574%;
+    }
+  }
+}
+.sort {
+  @include display-flex;
+  justify-content: space-between;
+  margin-bottom: 28px;
+  @media #{$media-ipad} {
+    margin-bottom: 20px;
+  }
+  &Left {
+    font-size: 16px;
+    line-height: 48px;
+    color: var(--blackColor);
+  }
+  &Right {
+    @include display-flex;
+    padding: 11px 14.5px;
+    &Text {
+      font-size: 16px;
+      line-height: 24px;
+      color: var(--blackColor);
+      margin-right: 8px;
+    }
+    &Icon {
+      width: 24px;
+      height: 24px;
+    }
+  }
+}
+.guide {
+  @include display-flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  padding-bottom: 66px;
+  @media #{$media-ipad} {
+    display: none;
+  }
+  &Image {
+    min-width: 24px;
+    height: 24px;
+    margin: 0 4px;
+    @media #{$media-tablet-horizontal} {
+      margin: 0;
+    }
+  }
+  &ContainImage {
+    @include display-flex;
+    align-items: center;
+  }
+  &Element {
+    width: 25%;
+    background-color: var(--whiteColor);
+    padding: 23.5px 17.5px 19.5px;
+    border-bottom: 4px solid var(--greenColor);
+    border-radius: 8px;
+    h3 {
+      font-size: 18px;
+      line-height: 22px;
+      text-align: center;
+      margin-bottom: 10px;
+    }
+    p {
+      font-size: 14px;
+      line-height: 17px;
+      text-align: justify;
+      color: var(--greyColor);
+    }
+  }
+  &Title {
+    font-size: 32px;
+    line-height: 39px;
+    text-align: center;
+    color: var(--black0Color);
+    padding-top: 78px;
+    padding-bottom: 52px;
+    margin: 0;
+    @media #{$media-ipad} {
+      font-size: 24px;
+      line-height: 29px;
+      padding-top: 54px;
+      padding-bottom: 32px;
+    }
+  }
+  &Mobile {
+    display: none;
+    padding-bottom: 94px;
+    @media #{$media-ipad} {
+      display: block;
+    }
+    &Element {
+      margin: 0 16px;
+      height: 100%;
+      background-color: var(--whiteColor);
+      padding: 28px 17.5px 24px;
+      border-bottom: 4px solid var(--greenColor);
+      border-radius: 8px;
+      h3 {
+        font-size: 18px;
+        line-height: 22px;
+        text-align: center;
+        margin-bottom: 16px;
+      }
+      p {
+        font-size: 14px;
+        line-height: 20px;
+        text-align: justify;
+        color: var(--greyColor);
+      }
+    }
+  }
+}
+.care {
+  padding-bottom: 44px;
+  &Title {
+    font-size: 32px;
+    line-height: 39px;
+    text-align: center;
+    color: var(--black0Color);
+    padding-top: 60px;
+    padding-bottom: 16px;
+  }
+  &Container {
+    @media #{$media-ipad} {
+      padding-left: 16px;
+    }
+  }
+  &Element {
+    border: 1px solid rgba(6, 118, 85, 0.5);
+    border-radius: 8px;
+    margin: 16px;
+    white-space: pre-line;
+    transition: 0.3s;
+    background: transparent;
+    cursor: pointer;
+    background-color: var(--itemBgColor);
+
+    @media #{$media-ipad} {
+      margin: 4px;
+    }
+  }
+
+  &Wrapper {
+    padding: 25px;
+
+    @media #{$media-fullhd} {
+      padding: 17px;
+    }
+
+    @media #{$media-ipad-pro} {
+      padding: 16px;
+    }
+    @media #{$media-ipad} {
+      padding: 13px;
+    }
+  }
+
+  &Icon {
+    width: 70px;
+    height: 70px;
+    min-width: 70px;
+
+    @media #{$media-fullhd} {
+      width: 60px;
+      height: 60px;
+      min-width: 50px;
+    }
+
+    @media #{$media-ipad} {
+      width: 40px;
+      height: 40px;
+      min-width: 40px;
+    }
+  }
+
+  &Name {
+    margin-bottom: 0;
+    text-align: center;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 30px;
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+
+    @media #{$media-fullhd} {
+      font-size: 16px;
+    }
+
+    @media #{$media-ipad} {
+      font-size: 12px;
+      line-height: 15px;
+    }
+  }
+
+  &Content {
+    font-size: 11px;
+  }
+  &Text {
+    height: 60px;
+    margin-top: 13px;
+    @media #{$media-ipad} {
+      height: 30px;
+      margin-top: 4px;
+    }
+  }
+}
+.container {
+  background-color: var(--whiteColor);
+  padding-top: 105px;
+  padding-bottom: 46px;
+  @media #{$media-ipad} {
+    padding: 80px 16px 20px;
+  }
+  &Title {
+    margin: 0;
+    text-align: center;
+    font-size: 32px;
+    line-height: 39px;
+    color: var(--black0color);
+    @media #{$media-fullhd} {
+      margin-top: 27px;
+      margin-bottom: 20px;
+      font-size: 28px;
+      line-height: 34px;
+    }
+    @media #{$media-ipad} {
+      font-size: 24px;
+      line-height: 29px;
+      margin: 16px 0;
+    }
+  }
+  &Text {
+    font-size: 16px;
+    line-height: 24px;
+    color: var(--greyColor);
+    &Time {
+      font-size: 16px;
+      line-height: 24px;
+      color: var(--greyColor);
+      padding-bottom: 24px;
+      @media #{$media-ipad} {
+        padding-bottom: 16px;
+      }
+    }
+    &Result {
+      font-size: 32px;
+      line-height: 39px;
+      margin: 32px 0;
+      text-align: center;
+      @media #{$media-ipad} {
+        margin-top: 20px;
+        font-size: 24px;
+        line-height: 29px;
+      }
+    }
+    &Find {
+      font-size: 32px;
+      line-height: 39px;
+      color: var(--black0color);
+      text-align: center;
+      margin-top: 60px;
+      margin-bottom: 33px;
+    }
+  }
+  &Input {
+    border: 2px solid var(--greyE8Color);
+    border-radius: 8px;
+    margin-top: 32px;
+    @include display-flex;
+    align-items: center;
+    @media #{$media-tablet-vertical} {
+      flex-wrap: wrap;
+      border: none;
+      border-radius: 0;
+    }
+    @media #{$media-ipad} {
+      margin-top: 16px;
+    }
+    &Left {
+      padding: 35px 24px;
+      width: 50%;
+      background-color: var(--greyE8Color);
+      @media #{$media-tablet-vertical} {
+        border: 2px solid var(--greyE8Color);
+        border-radius: 8px;
+        width: 100%;
+      }
+      @media #{$media-ipad} {
+        padding: 16px;
+      }
+      &Element {
+        position: relative;
+        @include display-flex;
+        flex-wrap: nowrap;
+        @media #{$media-tablet-vertical} {
+          flex-wrap: wrap;
+        }
+      }
+      &Title {
+        font-size: 14px;
+        line-height: 17px;
+        color: var(--blackColor);
+        &:first-child {
+          @media #{$media-ipad} {
+            width: 100%;
+            margin-bottom: 13px;
+          }
+        }
+        &:last-child {
+          @media #{$media-ipad} {
+            position: absolute;
+            right: 0;
+            bottom: 5px;
+          }
+        }
+      }
+      &Money {
+        border: none;
+        border-bottom: 2px dashed #d9d9d9;
+        flex: 1;
+        display: block;
+        margin: auto;
+        background: transparent;
+        text-align: center;
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 22px;
+        color: var(--blackColor);
+        @media #{$media-ipad} {
+          text-align: left;
+          font-size: 16px;
+          line-height: 19px;
+        }
+      }
+      &Line {
+        position: relative;
+        margin-top: 16px;
+        margin-bottom: 32px;
+        @media #{$media-ipad} {
+          margin-top: 12px;
+          margin-bottom: 16px;
+        }
+        &NotActive {
+          position: absolute;
+          width: 100%;
+          height: 8px;
+          top: 10px;
+          background: var(--greyD9Color);
+          border-radius: 8px;
+        }
+        &Active {
+          position: absolute;
+          height: 8px;
+          top: 10px;
+          background: var(--greenColor);
+          border-radius: 8px;
+        }
+      }
+      &Ranger {
+        position: relative;
+        display: block;
+        appearance: none;
+        width: 100%;
+        height: 28px;
+        cursor: pointer;
+        background: transparent;
+        border-radius: 8px;
+        z-index: 2;
+        &:focus {
+          outline: none;
+        }
+        &::-webkit-slider-thumb {
+          position: relative;
+          appearance: none;
+          height: 28px;
+          width: 28px;
+          background-color: var(--whiteColor);
+          border-radius: 100%;
+          border: 7px solid var(--greenColor);
+          transition: background-color 150ms;
+          z-index: 2;
+        }
+        &::-ms-thumb {
+          appearance: none;
+          height: 36px;
+          width: 36px;
+          background: var(--greenColor);
+          border-radius: 100%;
+          border: 0;
+          transition: background-color 150ms;
+          top: 0;
+          margin: 0;
+          box-shadow: none;
+        }
+
+        &:hover,
+        &:focus {
+          &::-webkit-slider-thumb {
+            background-color: #0199ff;
+          }
+          &::-moz-range-thumb {
+            background-color: #0199ff;
+          }
+          &::-ms-thumb {
+            background-color: #0199ff;
+          }
+        }
+      }
+      &Calc {
+        font-size: 16px;
+        line-height: 19px;
+        color: var(--black0color);
+        margin-bottom: 18px;
+      }
+      &Radio {
+        @include display-flex;
+        flex-wrap: nowrap;
+        margin-bottom: 24px;
+        @media #{$media-ipad} {
+          flex-wrap: wrap;
+          margin-bottom: 16px;
+        }
+        &Element {
+          width: 100%;
+          &:first-child {
+            @media #{$media-ipad} {
+              margin-bottom: 16px;
+            }
+          }
+          [type="radio"]:checked,
+          [type="radio"]:not(:checked) {
+            position: absolute;
+            left: -9999px;
+          }
+          [type="radio"]:checked + label,
+          [type="radio"]:not(:checked) + label {
+            position: relative;
+            padding-left: 34px;
+            cursor: pointer;
+            line-height: 24px;
+            display: inline-block;
+            color: var(--black0color);
+          }
+          [type="radio"]:checked + label:before,
+          [type="radio"]:not(:checked) + label:before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 24px;
+            height: 24px;
+            border: 1px solid #ddd;
+            border-radius: 100%;
+            background: #fff;
+          }
+          [type="radio"]:checked + label:after,
+          [type="radio"]:not(:checked) + label:after {
+            content: "";
+            width: 16px;
+            height: 16px;
+            background: var(--greenColor);
+            position: absolute;
+            top: 4px;
+            left: 4px;
+            border-radius: 100%;
+            -webkit-transition: all 0.2s ease;
+            transition: all 0.2s ease;
+          }
+          [type="radio"]:not(:checked) + label:after {
+            opacity: 0;
+            -webkit-transform: scale(0);
+            transform: scale(0);
+          }
+          [type="radio"]:checked + label:after {
+            opacity: 1;
+            -webkit-transform: scale(1);
+            transform: scale(1);
+          }
+          label {
+            font-size: 16px;
+            padding-left: 10px;
+            @media #{$media-ipad} {
+              font-size: 14px;
+            }
+          }
+        }
+      }
+      &Button {
+        padding: 14.5px;
+        border: none;
+        background-color: var(--greenColor);
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 19px;
+        text-align: center;
+        display: block;
+        margin: auto;
+        color: #ffffff;
+        border-radius: 8px;
+        width: 44.11764705882353%;
+        &:hover {
+          opacity: 0.9;
+        }
+      }
+    }
+    &Right {
+      padding-left: 22px;
+      padding-right: 26px;
+      width: 50%;
+      @media #{$media-tablet-vertical} {
+        width: 100%;
+        padding: 20px 16px 0;
+      }
+      &Element {
+        @include display-flex;
+        justify-content: space-between;
+        padding-bottom: 24px;
+        margin-bottom: 24px;
+        border-bottom: 1px solid var(--greyD9Color);
+        align-items: center;
+        &:last-child {
+          margin-bottom: 0;
+          border-bottom: none;
+        }
+        &Title {
+          font-size: 16px;
+          line-height: 24px;
+          color: var(--blackColor);
+        }
+        &Value {
+          font-weight: 700;
+          font-size: 20px;
+          line-height: 24px;
+          text-align: right;
+          color: var(--blackColor);
+        }
+      }
+    }
+  }
+  &Table {
+    width: 100%;
+    text-align: center;
+    font-size: 16px;
+    line-height: 19px;
+    margin-top: 60px;
+    @media #{$media-ipad} {
+      font-size: 14px;
+      line-height: 17px;
+    }
+    th {
+      padding: 18.5px;
+      border: 1px solid var(--whiteColor);
+      background-color: var(--greenColor);
+      font-weight: 500;
+      text-align: center;
+      color: var(--whiteColor);
+      @media #{$media-ipad} {
+        padding: 11.5px 9.5px;
+      }
+      &:first-child {
+        border-radius: 8px 0px 0px 0px;
+      }
+      &:last-child {
+        border-radius: 0px 8px 0px 0px;
+      }
+    }
+    td {
+      padding: 18.5px;
+      @media #{$media-ipad} {
+        padding: 11.5px 9.5px;
+        border: 1px solid var(--greyD9Color);
+      }
+    }
+    &Icon {
+      width: 25px;
+      height: 25px;
+      margin: auto;
+    }
+    tr {
+      &:nth-child(odd) {
+        background-color: var(--greyF0Color);
+      }
+      &:nth-child(even) {
+        background-color: var(--whiteColor);
+      }
+    }
+  }
+  &TableNew {
+    width: 100%;
+    text-align: center;
+    font-size: 16px;
+    line-height: 19px;
+    @media #{$media-ipad} {
+      font-size: 14px;
+      line-height: 17px;
+    }
+    th {
+      padding: 18.5px;
+      border: 1px solid var(--whiteColor);
+      background-color: var(--greenColor);
+      font-weight: 500;
+      text-align: center;
+      color: var(--whiteColor);
+      @media #{$media-ipad} {
+        padding: 11.5px 9.5px;
+      }
+      &:first-child {
+        border-radius: 8px 0px 0px 0px;
+      }
+      &:last-child {
+        border-radius: 0px 8px 0px 0px;
+      }
+    }
+    td {
+      padding: 20px;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 19px;
+      color: var(--black0color);
+      @media #{$media-ipad} {
+        padding: 11.5px 9.5px;
+        // border: 1px solid var(--greyD9Color);
+      }
+    }
+    &Icon {
+      width: 25px;
+      height: 25px;
+      margin: auto;
+    }
+    &Grey {
+      background-color: var(--greyF0Color);
+    }
+    &White {
+      background-color: var(--whiteColor);
+    }
+    &Mobile {
+      display: none;
+      @media #{$media-ipad} {
+        display: table-row;
+      }
+    }
+    &Button {
+      display: block;
+      font-weight: 700;
+      text-align: center;
+      color: var(--greenColor);
+      padding: 14.5px;
+      border: 1px solid #067655;
+      border-radius: 8px;
+      background-color: var(--whiteColor);
+      cursor: pointer;
+      &:hover {
+        color: var(--whiteColor);
+        background-color: var(--greenColor);
+      }
+    }
+    &Image {
+      height: 50px;
+    }
+    &Border {
+      @media #{$media-ipad} {
+        border-radius: 0px 8px 0px 0px;
+      }
+    }
+  }
+  &Menu {
+    @include display-flex;
+    flex-wrap: nowrap;
+    background: var(--whiteColor);
+    border: 1px solid var(--greyE8Color);
+    border-radius: 8px;
+    padding: 12px;
+    margin-bottom: 24px;
+    @media #{$media-tablet-vertical} {
+      flex-wrap: wrap;
+      margin-bottom: 20px;
+    }
+    &Select {
+      position: relative;
+      width: 100%;
+      margin-right: 12px;
+      background: var(--greyF0Color);
+
+      border-radius: 8px;
+      cursor: pointer;
+      @media #{$media-tablet-vertical} {
+        margin-right: 0;
+        margin-bottom: 12px;
+      }
+      &Button {
+        @include display-flex;
+        justify-content: space-between;
+        padding: 18.5px 16px;
+        @media #{$media-ipad} {
+          padding: 15.5px 16px;
+        }
+      }
+      &Text {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
+        font-size: 16px;
+        line-height: 24px;
+        color: var(--greyColor);
+        @media #{$media-ipad} {
+          font-size: 14px;
+        }
+      }
+      &Icon {
+        width: 24px;
+        height: 24px;
+        transition: 0.3s;
+      }
+      &IconActive {
+        width: 24px;
+        height: 24px;
+        transform: rotate(-180deg);
+        transition: 0.3s;
+      }
+      &Input {
+        width: 100%;
+        background: transparent;
+        border: none;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
+        font-size: 16px;
+        line-height: 24px;
+        color: var(--greyColor);
+        @media #{$media-ipad} {
+          font-size: 14px;
+        }
+        &::placeholder {
+          color: var(--greyColor);
+          opacity: 1;
+        }
+      }
+    }
+    &Button {
+      width: 100%;
+      text-align: center;
+      padding: 18.5px 16px;
+      border-radius: 8px;
+      background-color: var(--greenColor);
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 19px;
+      text-align: center;
+      color: var(--whiteColor);
+      cursor: pointer;
+      &:hover {
+        opacity: 0.9;
+      }
+      @media #{$media-ipad} {
+        font-size: 14px;
+        padding: 15.5px 16px;
+      }
+    }
+  }
+  &SeeMore {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 75px;
+    border-radius: 8px;
+    background: var(--whiteColor);
+    overflow: hidden;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    z-index: 1;
+    @media #{$media-ipad} {
+      top: 60px;
+    }
+    &Element {
+      display: block;
+      color: var(--greyColor);
+      padding: 14.5px;
+      border-bottom: 1px solid #f0f0f0;
+      font-weight: 400;
+      transition: 0.3s;
+      &:last-child {
+        border-bottom: none;
+      }
+      &:hover {
+        background-color: $basic-color;
+        color: var(--whiteColor);
+        font-weight: 700;
+      }
+    }
+  }
+  &Pagination {
+    padding-top: 33px;
+    @include display-flex;
+    justify-content: flex-end;
+    @media #{$media-ipad} {
+      padding-top: 20px;
+      justify-content: center;
+    }
+  }
+  &Mobile {
+    display: none;
+    padding-top: 20px;
+    @media #{$media-ipad} {
+      display: block;
+    }
+    &Element {
+      padding: 16px;
+      font-size: 14px;
+      line-height: 32px;
+      &:nth-child(odd) {
+        background-color: var(--greyF0Color);
+      }
+      &:nth-child(even) {
+        background-color: var(--whiteColor);
+      }
+    }
+  }
+  &Credit {
+    background: var(--whiteColor);
+    border: 2px solid var(--borderColor);
+    border-radius: 8px;
+    margin-bottom: 26px;
+    .onMobile {
+      display: none;
+      margin: 0 16px 16px 16px;
+      h2 {
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 1;
+        margin-bottom: 4px;
+        cursor: pointer;
+      }
+      @media #{$media-ipad} {
+        display: block;
+      }
+      &Button {
+        display: none;
+        width: 100%;
+        @media #{$media-ipad} {
+          display: block;
+        }
+      }
+    }
+    &Head {
+      margin: 24px 32px 12px;
+      @include display-flex;
+      justify-content: space-between;
+      gap: 44px;
+      @media #{$media-ipad} {
+        margin: 16px;
+      }
+      &Text {
+        font-size: 13px;
+        line-height: 1.2;
+        color: var(--greyColor);
+        @media #{$media-ipad} {
+          font-size: 11px;
+        }
+      }
+      &Right {
+        @include display-flex;
+        align-items: center;
+      }
+      &Check {
+        width: 24px;
+        height: 24px;
+      }
+      &Text1 {
+        font-size: 16px;
+        line-height: 19px;
+        margin-left: 8px;
+        @media #{$media-ipad} {
+          display: none;
+        }
+      }
+    }
+    &Content {
+      @include display-flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      padding: 0 32px 44px;
+      @media #{$media-ipad} {
+        border-bottom: 1px solid #d9d9d9;
+        padding: 0 16px;
+      }
+      &Left {
+        width: 55.4140127388535%;
+        display: flex;
+        justify-content: space-between;
+        @media #{$media-ipad} {
+          width: 100%;
+          align-items: center;
+        }
+        &Create {
+          width: 34.05172413793103%;
+          @media #{$media-fullhd} {
+            width: 40%;
+          }
+          @media #{$media-ipad} {
+            width: 51.36054421768707%;
+          }
+          &Text {
+            font-size: 12px;
+            line-height: 15px;
+            text-align: center;
+            color: var(--greyColor);
+            margin-top: 14px;
+            @media #{$media-ipad} {
+              margin-top: 12px;
+            }
+          }
+        }
+        &Info {
+          width: 61.35057471264368%;
+          @media #{$media-fullhd} {
+            width: 55%;
+          }
+          @media #{$media-ipad} {
+            width: 45.57823129251701%;
+          }
+          h2 {
+            font-weight: 700;
+            font-size: 24px;
+            line-height: 1.2;
+            margin-bottom: 16px;
+            cursor: pointer;
+            @media #{$media-fullhd} {
+              font-size: 20px;
+            }
+          }
+          .textRating {
+            font-size: 14px;
+            line-height: 17px;
+            margin-top: 16px;
+            @media #{$media-ipad} {
+              margin-top: 0;
+            }
+          }
+          .textReview {
+            font-size: 14px;
+            line-height: 17px;
+            color: #096dd9;
+            cursor: pointer;
+          }
+        }
+      }
+      &Right {
+        width: 42.35668789808917%;
+        @media #{$media-ipad} {
+          width: 100%;
+        }
+        &Element {
+          border-bottom: 1px solid #d9d9d9;
+          padding-top: 18px;
+          padding-bottom: 16px;
+          display: flex;
+          justify-content: space-between;
+          &:last-child {
+            border: none;
+          }
+          @media #{$media-ipad} {
+            justify-content: flex-start;
+          }
+          &1 {
+            display: flex;
+            .textCriteria {
+              font-size: 16px;
+              line-height: 24px;
+              color: var(--greyColor);
+              margin-right: 8px;
+              @media #{$media-ipad} {
+                font-size: 14px;
+                margin-right: 5px;
+              }
+            }
+          }
+          &2 {
+            width: 69.73684210526316%;
+            font-size: 16px;
+            line-height: 24px;
+            font-size: 14px;
+            @media #{$media-ipad} {
+              width: fit-content;
+              margin-left: 16px;
+            }
+          }
+        }
+      }
+      &Image {
+        width: 100%;
+        cursor: pointer;
+      }
+      &Sponsor {
+        position: absolute;
+        font-size: 12px;
+        line-height: 15px;
+        text-align: center;
+        color: var(--whiteColor);
+        bottom: 5px;
+        right: 5px;
+        padding: 3px 6px;
+        background: rgba(0, 0, 0, 0.4);
+        border-radius: 8px;
+        @media #{$media-ipad} {
+          font-size: 10px;
+          line-height: 12px;
+          padding: 2px;
+        }
+      }
+      &Button {
+        padding: 12.5px;
+        background: $basic-color;
+        border-radius: 8px;
+        color: #fff;
+        text-align: center;
+        margin-top: 14px;
+        width: 100%;
+        @media #{$media-ipad} {
+          margin-top: 16px;
+          padding: 9.5px;
+        }
+      }
+    }
+    &Option {
+      padding: 16px 32px;
+      border-bottom: 1px solid #d9d9d9;
+      cursor: pointer;
+      &:last-child {
+        border: none;
+      }
+      &Content {
+        color: var(--blackColor);
+        font-size: 16px;
+        line-height: 24px;
+        @include display-flex;
+        justify-content: space-between;
+      }
+      @media #{$media-ipad} {
+        padding: 16px;
+        font-size: 14px;
+      }
+    }
+    &Image {
+      background-size: cover;
+      border-radius: 5px;
+      width: 100%;
+      padding-top: 62.44725738396624%;
+    }
+    .checkbox {
+      &Content {
+        line-height: 1;
+        font-size: 16px;
+        color: var(--blackColor);
+        @media #{$media-ipad} {
+          display: none;
+        }
+      }
+      &Input {
+        height: 24px;
+        margin-right: 8px;
+        @media #{$media-ipad} {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+
+  &Checkbox {
+    @include display-flex;
+    align-items: center;
+  }
+  &NoProduct {
+    color: var(--blackColor);
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+}
+.creditContent {
+  padding-top: 0;
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.3s;
+  max-height: 0;
+  &Active {
+    padding-top: 20px;
+    visibility: visible;
+    opacity: 1;
+    max-height: 100%;
+  }
+}
+.iconArrowContent {
+  width: 24px;
+  height: 24px;
+  transition: 0.3s;
+  &Active {
+    transform: rotate(-180deg);
+  }
+}
+.program {
+  &Title {
+    font-size: 32px;
+    line-height: 39px;
+    text-align: center;
+    color: var(--black0Color);
+    margin-top: 60px;
+    margin-bottom: 32px;
+  }
+}

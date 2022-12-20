@@ -1,0 +1,121 @@
+@import "/assets/styles/helpers/variables";
+.wrapper {
+  width: 100%;
+  padding: 83px 0 70px 0;
+  @media #{$media-ipad} {
+    padding: 30px 0 26px 0;
+  }
+
+  .serviceList {
+    padding: 10px;
+    flex-wrap: wrap;
+  }
+  &Line {
+    width: 34px;
+    height: 2px;
+    background-color: $basic-color;
+    margin: 0 16px;
+    @media #{$media-ipad} {
+      width: 16px;
+      margin: 0 12px;
+    }
+  }
+  &Title {
+    font-family: "Raleway";
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 23px;
+    color: $basic-color;
+    @media #{$media-ipad} {
+      font-size: 14px;
+      line-height: 16px;
+    }
+  }
+  &Text {
+    font-family: "Raleway";
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 47px;
+    margin-top: 16px;
+    margin-bottom: 37px;
+    @media #{$media-fullhd} {
+      margin-bottom: calc(#{$margin-bottom-header-media-fullhd} - 16px);
+    }
+    @media #{$media-ipad-pro} {
+      margin-bottom: calc(#{$margin-bottom-header-media-ipad-pro} - 16px);
+      font-size: $font-size-header-media-ipad-pro;
+    }
+    @media #{$media-ipad} {
+      font-size: 24px;
+      line-height: 28px;
+      margin-top: 8px;
+      margin-bottom: 24px;
+    }
+  }
+}
+.serviceItem {
+  &Container {
+    height: 100%;
+    padding: 16px;
+    white-space: pre-line;
+
+    color: var(--blackColor);
+  }
+
+  &Wrapper {
+    height: 100%;
+    padding: 32px 20px;
+    background-color: var(--itemBgColor);
+    box-shadow: 0px 13px 22px rgba(0, 0, 0, 0.05);
+    border-bottom: 6px solid #067655;
+    border-radius: 8px;
+  }
+  &ContainerImage {
+    width: 110px;
+  }
+  &Image {
+    border: 5px solid #067655;
+    border-radius: 50%;
+    width: 110px;
+    height: 110px;
+    min-width: 36px;
+    border-radius: 100%;
+    overflow: hidden;
+  }
+
+  &Name {
+    color: var(--black26Color);
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 22px;
+    margin-top: 16px;
+    text-transform: capitalize;
+    margin-bottom: 0;
+    text-align: center;
+  }
+  &Position {
+    margin-top: 16px;
+    margin-bottom: 16px;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    color: #067655;
+  }
+  &Rating {
+    display: flex;
+  }
+
+  &Content {
+    font-size: 11px;
+  }
+  &Title {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+  }
+  .buttonSlider:before {
+    width: 60px;
+    height: 60px;
+  }
+}

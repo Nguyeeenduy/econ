@@ -1,0 +1,93 @@
+@import "/assets/styles/helpers/variables";
+
+.securityIntroduce {
+    .security {
+        &Container {
+            padding: 41px 0 60px;
+
+            @media #{$media-ipad} {
+                padding: 50px 16px 37px;
+            }
+        }
+
+        &Header {
+            &Bar {
+                width: 34px;
+                height: 0px;
+                border: 1px solid #067655;
+            }
+
+            &Intro {
+                @include display-flex;
+                align-items: center;
+                justify-content: center;
+
+                span {
+                    padding: 0 16px;
+                    font-weight: 600;
+                    font-size: 20px;
+                    line-height: 23px;
+                    letter-spacing: 0.16em;
+                    color: $basic-color;
+                    text-transform: uppercase;
+
+                    @media #{$media-ipad} {
+                        font-size: 14px;
+                        line-height: 16px;
+                    }
+                }
+            }
+
+            &Title {
+                text-align: center;
+                margin-top: 12px;
+                margin-bottom: 59px;
+                font-weight: 700;
+                font-size: 40px;
+                line-height: 48px;
+                color: var(--blackColor);
+
+                @media #{$media-ipad} {
+                    font-size: 24px;
+                    line-height: 29px;
+                    margin-bottom: 26px;
+                }
+            }
+        }
+
+        &Body {
+            @include display-flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 16px;
+
+            &Item {
+                padding: 32px;
+                text-align: center;
+                width: calc(20% - 16px);
+                background: var(--blogBgColor);
+                border-radius: 8px;
+
+                @media #{$media-ipad} {
+                    width: 100%;
+                    padding: 25px;
+                }
+
+                &Image {
+                    margin: auto;
+                    height: 60px;
+                    width: 60px;
+                    margin-bottom: 10px;
+                }
+
+                &Description {
+
+                    font-weight: 700;
+                    font-size: 16px;
+                    line-height: 19px;
+                    color: var(--blackColor);
+                }
+            }
+        }
+    }
+}

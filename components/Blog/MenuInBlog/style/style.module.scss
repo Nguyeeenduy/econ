@@ -1,0 +1,65 @@
+@import "/assets/styles/helpers/variables";
+.containerMenu {
+  background: var(--blogBgColor);
+  border-radius: 8px;
+  padding: 24px 32px;
+  margin: 32px 0 24px 0;
+  &Image {
+    width: 24px;
+    min-width: 24px;
+    height: 24px;
+    transition: 0.3s;
+  }
+  &List {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    &Element {
+      border-bottom: 1px solid #d9d9d9;
+      &Child {
+        margin-left: 40px;
+        visibility: hidden;
+        opacity: 0;
+        transition: 0.3s;
+        max-height: 0;
+        &Active {
+          visibility: visible;
+          opacity: 1;
+          max-height: 100vh;
+          transition: 0.3s;
+        }
+      }
+    }
+  }
+  &ListItem {
+    display: flex;
+    justify-content: space-between;
+
+    padding: 22.5px 0;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    cursor: pointer;
+    a {
+      color: var(--greenColor);
+      &:hover {
+        color: var(--greyColor);
+      }
+    }
+    @media #{$media-ipad} {
+      padding: 20px 0;
+    }
+    &Child {
+      display: flex;
+      justify-content: space-between;
+      padding-bottom: 20px;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 17px;
+      color: var(--greenColor);
+      &:hover {
+        color: var(--greyColor);
+      }
+    }
+  }
+}

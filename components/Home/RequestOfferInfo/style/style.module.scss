@@ -1,0 +1,235 @@
+@import "/assets/styles/helpers/variables";
+.backgroundBlog {
+  width: 100%;
+}
+.container {
+  width: 100%;
+  margin: auto;
+  top: 0;
+  padding-top: 64px;
+  @media #{$media-ipad} {
+    padding-top: 30px;
+  }
+  .wrapper {
+    &Line {
+      width: 34px;
+      height: 2px;
+      background-color: $basic-color;
+      margin: 0 16px;
+      @media #{$media-ipad} {
+        width: 16px;
+        margin: 0 12px;
+      }
+    }
+    &Title {
+      font-family: "Raleway";
+      font-weight: 600;
+      font-size: 20px;
+      line-height: 23px;
+      color: $basic-color;
+      @media #{$media-ipad} {
+        font-size: 14px;
+        line-height: 16px;
+      }
+    }
+    &Text {
+      font-family: "Raleway";
+      font-weight: 700;
+      font-size: 40px;
+      line-height: 47px;
+      margin-top: 16px;
+      margin-bottom: 48px;
+      @media #{$media-fullhd} {
+        margin-bottom: $margin-bottom-header-media-fullhd;
+      }
+      @media #{$media-ipad-pro} {
+        margin-bottom: $margin-bottom-header-media-ipad-pro;
+        font-size: $font-size-header-media-ipad-pro;
+      }
+      @media #{$media-ipad} {
+        font-size: 24px;
+        line-height: 28px;
+        margin-top: 8px;
+        margin-bottom: 16px;
+      }
+    }
+  }
+  &Blog {
+    &Full {
+      flex-wrap: nowrap;
+      @media #{$media-ipad} {
+        flex-wrap: wrap;
+      }
+    }
+    &Left {
+      width: 50%;
+      margin-right: 32px;
+      box-sizing: border-box;
+      background-color: var(--whiteColor);
+      border: 2px solid var(--borderColor);
+      border-radius: 8px;
+      display: flex;
+      flex-direction: column;
+      cursor: pointer;
+      @media #{$media-ipad} {
+        width: 100%;
+        margin: 0 16px 16px 16px;
+      }
+      &Image {
+        width: 100%;
+        padding-top: 52.79503105590062%;
+        border-radius: 8px;
+        overflow: hidden;
+      }
+      &Text {
+        padding: 24px;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        @media #{$media-ipad} {
+          padding: 16px;
+        }
+      }
+      &Title {
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 24px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        @media #{$media-ipad} {
+          font-size: 14px;
+          line-height: 17px;
+          -webkit-line-clamp: 10;
+        }
+      }
+      &Description {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 17px;
+        margin-top: 16px;
+        color: var(--blackColor);
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        @media #{$media-ipad} {
+          font-size: 12px;
+          line-height: 15px;
+          -webkit-line-clamp: 4;
+        }
+      }
+      &SeeDetail {
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 19px;
+        color: #067655;
+        cursor: pointer;
+        @media #{$media-ipad} {
+          margin-top: 12px;
+          font-size: 12px;
+          line-height: 16px;
+        }
+      }
+    }
+
+    &Right {
+      width: 50%;
+      @media #{$media-ipad} {
+        width: 100%;
+      }
+      &ContainerImage {
+        width: 29.968944099%;
+        @media #{$media-fullhd} {
+          width: 40%;
+        }
+        @media #{$media-ipad} {
+          width: 32.369942196%;
+        }
+      }
+      &Image {
+        width: 100%;
+        height: 100%;
+        border-radius: 8px;
+        overflow: hidden;
+      }
+      &Text {
+        padding: 24px;
+        flex: 1;
+        @media #{$media-ipad} {
+          padding: 16px 8px;
+        }
+      }
+      &Title {
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 19px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        @media #{$media-ipad} {
+          font-size: 14px;
+          line-height: 17px;
+          -webkit-line-clamp: 10;
+        }
+      }
+      &Element {
+        background-color: var(--whiteColor);
+        border: 2px solid var(--borderColor);
+        border-radius: 8px;
+        cursor: pointer;
+        @media #{$media-ipad} {
+          margin: 0 16px 16px 16px !important;
+        }
+      }
+    }
+    &Date {
+      font-style: italic;
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 15px;
+      color: #595959;
+      margin-top: 16px;
+    }
+    .buttonSeeMoreBlog {
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 19px;
+      text-align: center;
+      color: #fff;
+      background: #067655;
+      border-radius: 8px;
+      padding: 12px 24px;
+      margin-top: 32px;
+      margin-bottom: 40px;
+      cursor: pointer;
+      @media #{$media-ipad} {
+        margin: 0 16px 30px 16px;
+        width: 100%;
+      }
+    }
+  }
+  .arrowRight {
+    border: solid #067655;
+    border-width: 0 1px 1px 0;
+    display: inline-block;
+    padding: 3px;
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+  }
+  .TextInfo {
+    font-size: 12px;
+    line-height: 15px;
+    margin-top: 16px;
+    @media #{$media-ipad} {
+      font-size: 10px;
+      margin-top: 12px;
+    }
+  }
+}

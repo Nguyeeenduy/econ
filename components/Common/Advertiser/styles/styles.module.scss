@@ -1,0 +1,47 @@
+@import "/assets/styles/helpers/variables";
+
+.advertiser {
+  font-size: 14px;
+  line-height: 17px;
+
+  color: #1890ff;
+  margin: 20px 0;
+  cursor: pointer;
+  &:hover {
+    text-decoration-line: underline;
+  }
+  @media #{$media-ipad} {
+    margin: 10px 0 16px;
+  }
+  &Modal {
+    position: absolute;
+    top: 30px;
+    max-width: 580px;
+    background-color: var(--whiteColor);
+    border: 1px solid #b1b3b5;
+    padding: 0.5rem 1rem;
+    -webkit-box-shadow: 0 4px 8px 0 rgb(100 102 106 / 15%),
+      0 8px 16px 0 rgb(100 102 106 / 33%);
+    box-shadow: 0 4px 8px 0 rgb(100 102 106 / 15%),
+      0 8px 16px 0 rgb(100 102 106 / 33%);
+    @media #{$media-ipad} {
+      max-width: 360px;
+    }
+    z-index: 10;
+  }
+  &Arrow {
+    position: absolute;
+    top: 25px;
+    left: 70px;
+    width: 10px;
+    height: 10px;
+    background-color: var(--whiteColor);
+    border-top: 1px solid #b1b3b5;
+    border-left: 1px solid #b1b3b5;
+    transform: rotate(45deg);
+    z-index: 11;
+  }
+  &Title {
+    color: $basic-color;
+  }
+}

@@ -1,0 +1,125 @@
+@import "/assets/styles/helpers/variables";
+
+.container {
+  padding-top: 41px;
+  padding-bottom: 62px;
+  @include display-flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  @media #{$media-ipad} {
+    padding: 20px 16px;
+    gap: 26px;
+  }
+  &Left {
+    width: 65.83333333333333%;
+    @media #{$media-ipad} {
+      width: 100%;
+    }
+    &Title {
+      font-size: 16px;
+      line-height: 19px;
+      color: var(--black0Color);
+      margin-bottom: 12px;
+    }
+    &Form {
+      @include display-flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      &Info {
+        width: 48.21634062140391%;
+
+        margin-bottom: 32px;
+        @media #{$media-ipad} {
+          width: 100%;
+          margin-bottom: 16px;
+        }
+      }
+      &Content {
+        width: 100%;
+        margin-bottom: 32px;
+        @media #{$media-ipad} {
+          margin-bottom: 16px;
+        }
+      }
+    }
+    &Input {
+      width: 100%;
+      padding: 15.5px 16px;
+      border-radius: 8px;
+      border: 1px solid var(--greyD9Color);
+      font-size: 14px;
+      line-height: 17px;
+    }
+    &Button {
+      border: none;
+      padding: 14.5px 71px;
+      border-radius: 8px;
+      background-color: var(--greenColor);
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 19px;
+      text-align: center;
+      color: var(--whiteColor);
+      &:hover {
+        opacity: 0.9;
+      }
+      @media #{$media-ipad} {
+        margin: auto;
+      }
+    }
+  }
+  &Right {
+    width: 31.81818181818182%;
+    @media #{$media-ipad} {
+      width: 100%;
+    }
+    &Background {
+      background: var(--greyF8Color);
+      padding: 24px 32px 33px;
+      border-radius: 8px;
+      @media #{$media-ipad} {
+        padding: 24px 20px 33px;
+      }
+    }
+    &Element {
+      margin-bottom: 26px;
+    }
+    &Title {
+      font-size: 16px;
+      line-height: 19px;
+      color: var(--black0Color);
+      text-align: center;
+      margin-bottom: 24px;
+    }
+    &Image {
+      margin-right: 22px;
+      min-width: 24px;
+      height: 24px;
+    }
+    &Link {
+      color: var(--blueColor);
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+  &Error {
+    color: var(--redColor);
+    margin-top: 10px;
+    &Send {
+      color: var(--redColor);
+      width: 100%;
+      margin-bottom: 16px;
+      @media #{$media-ipad} {
+        margin-bottom: 8px;
+      }
+    }
+  }
+  &Success {
+    color: var(--greenColor);
+    width: 100%;
+    margin-bottom: 16px;
+    @media #{$media-ipad} {
+      margin-bottom: 8px;
+    }
+  }
+}

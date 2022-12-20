@@ -1,0 +1,83 @@
+@import "/assets/styles/helpers/variables";
+
+.container {
+  padding: 12px;
+  border: 1px solid #e8f3f3;
+  border-radius: 8px;
+  width: 100%;
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 13px;
+  overflow-x: scroll;
+  &::-webkit-scrollbar {
+    display: none; /* for Chrome, Safari, and Opera */
+  }
+
+  &Button {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    padding: 18.5px;
+    cursor: pointer;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 16px;
+    transition: 0.5s;
+    position: relative;
+    background-color: #f0f0f0;
+    font-weight: 500;
+    color: var(--greyColor);
+    transition: 0.3s;
+    @media #{$media-ipad} {
+      min-width: 40%;
+      padding: 14.5px 9.5px;
+    }
+    @media only screen and (max-width: 434px) {
+      min-width: 40%;
+      padding: 5px 9.5px;
+    }
+    &:hover {
+      color: var(--greyColor) !important;
+      opacity: 0.8;
+    }
+    &Active {
+      background-color: var(--greenColor);
+      font-weight: 700;
+      color: var(--whiteColor) !important;
+      &:hover {
+        color: var(--whiteColor) !important;
+        opacity: 1;
+      }
+    }
+  }
+  &SeeMore {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 75px;
+    border-radius: 8px;
+    background: var(--whiteColor);
+    overflow: hidden;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    z-index: 1;
+    &Element {
+      display: block;
+      color: var(--subContentColor);
+      padding: 14.5px;
+      border-bottom: 1px solid #f0f0f0;
+      font-weight: 400;
+      transition: 0.3s;
+      &:last-child {
+        border-bottom: none;
+      }
+      &:hover {
+        background-color: $basic-color;
+        color: var(--whiteColor);
+        font-weight: 700;
+      }
+    }
+  }
+}

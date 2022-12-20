@@ -1,0 +1,126 @@
+@import "/assets/styles/helpers/variables";
+
+.valueIntroduce {
+    .value {
+        &Container {
+            padding: 60px 0;
+
+            @media #{$media-ipad} {
+                padding: 24px 16px 16px;
+            }
+        }
+
+        &Header {
+            &Bar {
+                width: 34px;
+                height: 0px;
+                border: 1px solid #067655;
+            }
+
+            &Intro {
+                @include display-flex;
+                align-items: center;
+                justify-content: center;
+
+                span {
+                    padding: 0 16px;
+                    font-weight: 600;
+                    font-size: 20px;
+                    line-height: 23px;
+                    letter-spacing: 0.16em;
+                    color: $basic-color;
+                    text-transform: uppercase;
+
+                    @media #{$media-ipad} {
+                        font-size: 14px;
+                        line-height: 16px;
+                    }
+                }
+            }
+
+            &Title {
+                text-align: center;
+                margin-top: 16px;
+                margin-bottom: 52px;
+                font-weight: 700;
+                font-size: 40px;
+                line-height: 48px;
+                color: var(--blackColor);
+
+                @media #{$media-ipad} {
+                    font-size: 24px;
+                    line-height: 29px;
+                    margin-bottom: 31px;
+                }
+            }
+        }
+
+        &Body {
+            .equal {
+                width: calc(50% - 16px);
+            }
+
+            .small {
+                width: calc(40% - 16px);
+            }
+
+            .green {
+                background-color: var(--greenIntroColor);
+            }
+
+            .blue {
+                background-color: var(--blueIntroColor);
+            }
+
+            .yellow {
+                background-color: var(--yellowIntroColor);
+            }
+
+            &Desktop {
+                @include display-flex;
+                justify-content: space-between;
+                flex-wrap: wrap;
+                gap: 32px;
+
+                @media #{$media-ipad} {
+                    display: none;
+                }
+
+                &Item {
+                    padding: 38px 40px 68px;
+                    border-radius: 8px;
+
+                    @media #{$media-ipad} {
+                        padding: 38px 22px 34px;
+                    }
+
+                    &Title {
+                        font-weight: 700;
+                        font-size: 20px;
+                        line-height: 24px;
+                        color: var(--blackColor);
+                        margin-bottom: 27px;
+                    }
+
+                    &Content {
+                        color: var(--blackColor);
+                        font-weight: 400;
+                        font-size: 16px;
+                        line-height: 24px;
+                        display: inline-block;
+                        text-align: justify;
+                    }
+                }
+            }
+
+            &Mobile {
+                padding-bottom: 44px;
+                display: none;
+
+                @media #{$media-ipad} {
+                    display: block;
+                }
+            }
+        }
+    }
+}

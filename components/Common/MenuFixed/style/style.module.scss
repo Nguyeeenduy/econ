@@ -1,0 +1,58 @@
+@import "/assets/styles/helpers/variables";
+
+.container {
+  position: fixed;
+  top: 80px;
+  left: 0;
+  right: 0;
+  z-index: 999;
+  background: var(--itemBgColor);
+  box-shadow: 0px 2px 5px rgb(0 0 0 / 10%);
+  transition: 0.5s;
+  @media #{$media-ipad} {
+    z-index: 10;
+    top: 60px;
+  }
+  &Menu {
+    height: 99px;
+    @media #{$media-ipad} {
+      height: 91px;
+    }
+  }
+  &Border {
+    padding: 12px 6px;
+    border: 1px solid #e8f3f3;
+    border-radius: 8px;
+    width: 100%;
+    overflow: hidden;
+  }
+
+  &Button {
+    display: flex;
+    gap: 13px;
+    flex-wrap: nowrap;
+    border-radius: 8px;
+    margin: 6px;
+    &Text {
+      padding: 18px;
+      width: 100%;
+      text-align: center;
+      border-radius: 8px;
+      font-size: 16px;
+
+      @media #{$media-ipad} {
+        padding: 14px;
+      }
+      span {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
+      }
+    }
+  }
+  &Mobile {
+    top: 0 !important;
+  }
+}

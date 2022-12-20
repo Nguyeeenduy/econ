@@ -1,0 +1,137 @@
+@import "/assets/styles/helpers/variables";
+
+.missionIntroduce {
+
+    .mission {
+        &Container {
+            padding: 52px 0 98px;
+
+            @media #{$media-ipad} {
+                padding: 24px 16px 0;
+            }
+        }
+
+        &Header {
+            &Bar {
+                width: 34px;
+                height: 0px;
+                border: 1px solid #067655;
+            }
+
+            &Intro {
+                @include display-flex;
+                align-items: center;
+                justify-content: center;
+
+                span {
+                    padding: 0 16px;
+                    font-weight: 600;
+                    font-size: 20px;
+                    line-height: 23px;
+                    letter-spacing: 0.16em;
+                    color: $basic-color;
+                    text-transform: uppercase;
+
+                    @media #{$media-ipad} {
+                        font-size: 14px;
+                        line-height: 16px;
+                    }
+                }
+            }
+
+            &Title {
+                text-align: center;
+                margin-top: 16px;
+                margin-bottom: 52px;
+                font-weight: 700;
+                font-size: 40px;
+                line-height: 48px;
+                color: var(--blackColor);
+
+                @media #{$media-ipad} {
+                    font-size: 24px;
+                    line-height: 29px;
+                    margin-bottom: 31px;
+                }
+            }
+        }
+
+        &Body {
+            @include display-flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+
+            &Item {
+                width: calc(50% - 16px);
+
+                @media #{$media-ipad} {
+                    width: 100%;
+                }
+
+                &Image {
+                    margin: auto;
+                    width: calc(100% - 90px);
+                    height: 100%;
+                    border-radius: 8px;
+                    overflow: hidden;
+
+                    @media #{$media-ipad} {
+                        width: 100%;
+                        height: 240px;
+                        margin-bottom: 20px;
+                    }
+                }
+
+                &Info {
+                    @include display-flex;
+
+                    &Image {
+                        margin-right: 32px;
+                        width: 80px;
+                        height: 80px;
+                        min-width: 80px;
+
+                        @media #{$media-ipad} {
+                            margin-right: 12px;
+                            width: 60px;
+                            height: 60px;
+                            min-width: 60px;
+                        }
+                    }
+
+                    &Text {
+                        &Title {
+                            font-weight: 700;
+                            font-size: 20px;
+                            line-height: 24px;
+                            color: var(--blackColor);
+
+                            @media #{$media-ipad} {
+                                font-weight: 700;
+                                font-size: 16px;
+                                line-height: 22px;
+                            }
+                        }
+
+                        &Content {
+                            display: inline-block;
+                            margin: 12px 0 32px;
+                            font-weight: 400;
+                            font-size: 16px;
+                            line-height: 24px;
+                            text-align: justify;
+                            color: var( --greyFooterColor);
+
+                            @media #{$media-ipad} {
+                                font-weight: 400;
+                                font-size: 14px;
+                                line-height: 19px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+}

@@ -1,0 +1,158 @@
+@import "/assets/styles/helpers/variables";
+
+.container {
+  position: fixed;
+  top: 79px;
+  left: 0;
+  right: 0;
+  z-index: 999;
+  background: var(--itemBgColor);
+  box-shadow: 0px 2px 5px rgb(0 0 0 / 10%);
+  transition: 0.5s;
+  @media #{$media-ipad} {
+    top: 60px;
+    z-index: 10;
+  }
+  &Border {
+    border: 1px solid var(--borderColor);
+    border-radius: 8px;
+    width: 100%;
+    overflow: hidden;
+    padding: 6px;
+    display: none;
+    @media #{$media-ipad} {
+      display: block;
+      margin-left: 16px;
+      padding: 6px 0 6px 10px;
+    }
+  }
+
+  &Button {
+    display: flex;
+    gap: 13px;
+    flex-wrap: nowrap;
+    border-radius: 8px;
+    margin: 6px;
+    &Click {
+      padding: 18px;
+      width: 100%;
+      text-align: center;
+      border-radius: 8px;
+      font-size: 16px;
+      background: #f0f0f0;
+      font-weight: 500;
+      color: var(--greyColor);
+      @media #{$media-ipad} {
+        padding: 14px;
+      }
+      &Active {
+        padding: 18px;
+        width: 100%;
+        text-align: center;
+        border-radius: 8px;
+        font-size: 16px;
+        background: var(--greenColor);
+        font-weight: 700;
+        color: var(--whiteColor);
+        @media #{$media-ipad} {
+          padding: 14px;
+        }
+      }
+    }
+    &Text {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-line-clamp: 1;
+      -webkit-box-orient: vertical;
+    }
+  }
+  &Mobile {
+    top: 0 !important;
+  }
+}
+.containerDesktop {
+  padding: 12px;
+  border: 1px solid #e8f3f3;
+  border-radius: 8px;
+  width: 100%;
+  margin-bottom: 20px;
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 13px;
+  @media #{$media-ipad} {
+    display: none;
+  }
+
+  &Button {
+    width: 100%;
+    flex-wrap: nowrap;
+    border-radius: 8px;
+    padding: 18.5px;
+    cursor: pointer;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 16px;
+    transition: 0.5s;
+    position: relative;
+    background-color: var(--greyF0Color);
+    font-weight: 500;
+    color: var(--subContentColor);
+    transition: 0.3s;
+    z-index: 1;
+    &:hover {
+      color: var(--subContentColor) !important;
+      opacity: 0.8;
+    }
+    &Active {
+      width: 100%;
+      flex-wrap: nowrap;
+      border-radius: 8px;
+      padding: 18.5px;
+      cursor: pointer;
+      border-radius: 8px;
+      text-align: center;
+      font-size: 16px;
+      transition: 0.5s;
+      position: relative;
+      transition: 0.3s;
+      z-index: 1;
+      background-color: var(--greenColor);
+      font-weight: 700;
+      color: var(--whiteColor) !important;
+      &:hover {
+        color: var(--whiteColor) !important;
+        opacity: 1;
+      }
+    }
+  }
+  &SeeMore {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 75px;
+    border-radius: 8px;
+    background: var(--whiteColor);
+    overflow: hidden;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    z-index: 1;
+    &Element {
+      display: block;
+      color: var(--subContentColor);
+      padding: 14.5px;
+      border-bottom: 1px solid #f0f0f0;
+      font-weight: 400;
+      transition: 0.3s;
+      z-index: 1;
+      &:last-child {
+        border-bottom: none;
+      }
+      &:hover {
+        background-color: $basic-color;
+        color: var(--whiteColor);
+        font-weight: 700;
+      }
+    }
+  }
+}

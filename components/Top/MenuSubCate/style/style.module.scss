@@ -1,0 +1,75 @@
+@import "/assets/styles/helpers/variables";
+
+.container {
+  padding: 12px;
+  border: 1px solid #e8f3f3;
+  border-radius: 8px;
+  width: 100%;
+  margin-bottom: 20px;
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 13px;
+  @media #{$media-ipad} {
+    display: none;
+  }
+
+  &Button {
+    width: 100%;
+    flex-wrap: nowrap;
+    border-radius: 8px;
+    padding: 18.5px;
+    cursor: pointer;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 16px;
+    transition: 0.5s;
+    position: relative;
+    background-color: var(--greyF0Color);
+    font-weight: 500;
+    color: var(--subContentColor);
+    transition: 0.3s;
+    z-index: 1;
+    &:hover {
+      color: var(--subContentColor) !important;
+      opacity: 0.8;
+    }
+    &Active {
+      background-color: var(--greenColor);
+      font-weight: 700;
+      color: var(--whiteColor) !important;
+      &:hover {
+        color: var(--whiteColor) !important;
+        opacity: 1;
+      }
+    }
+  }
+  &SeeMore {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 75px;
+    border-radius: 8px;
+    background: var(--whiteColor);
+    overflow: hidden;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    z-index: 1;
+    &Element {
+      display: block;
+      color: var(--subContentColor);
+      padding: 14.5px;
+      border-bottom: 1px solid #f0f0f0;
+      font-weight: 400;
+      transition: 0.3s;
+      z-index: 1;
+      &:last-child {
+        border-bottom: none;
+      }
+      &:hover {
+        background-color: $basic-color;
+        color: var(--whiteColor);
+        font-weight: 700;
+      }
+    }
+  }
+}

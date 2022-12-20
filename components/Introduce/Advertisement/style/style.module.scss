@@ -1,0 +1,32 @@
+@import "/assets/styles/helpers/variables";
+
+.containerDesktop {
+  background-color: $white-color;
+  width: 100%;
+  margin: auto;
+
+  @media #{$media-ipad} {
+    display: none;
+  }
+
+  &Image {
+    margin-top: 60px;
+    margin-bottom: 100px;
+    padding-top: 36.51515151515152%;
+  }
+}
+
+.containerMobile {
+  background-color: $white-color;
+  padding: 0 16px;
+  display: none;
+
+  @media #{$media-ipad} {
+    display: block;
+  }
+
+  &Image {
+    margin: 37px 0 55px 0;
+    padding-top: 84.25655976676385%;
+  }
+}

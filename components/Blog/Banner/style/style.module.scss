@@ -1,0 +1,72 @@
+@import "/assets/styles/helpers/variables";
+
+.BannerBlog {
+  margin-top: 80px;
+  @media #{$media-ipad} {
+    margin-top: 60px;
+  }
+  .container {
+    @media #{$media-ipad} {
+      display: none;
+    }
+
+    .breadcrumb {
+      padding-top: 26px;
+    }
+
+    .title {
+      font-family: "Raleway";
+      font-weight: 700;
+      font-size: 40px;
+      line-height: 47px;
+      color: #1f1f1f;
+      padding: 24px 0 24px;
+      margin: 0;
+      @media #{$media-ipad-pro} {
+        font-size: $font-size-header-media-ipad-pro;
+      }
+    }
+
+    .description {
+      font-family: "Raleway";
+      font-style: normal;
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 23px;
+      color: #8c8c8c;
+      padding-bottom: 75px;
+      @media #{$media-ipad-pro} {
+        padding-bottom: 50px;
+      }
+    }
+  }
+
+  .mobileBreadcrumb {
+    display: none;
+
+    @media #{$media-ipad} {
+      display: block;
+      padding-left: 16px;
+      padding-top: 23px;
+    }
+  }
+
+  .mainTitle {
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 48px;
+    text-align: center;
+    margin-top: 24px;
+    margin-bottom: 32px;
+    @media #{$media-ipad-pro} {
+      font-size: 36px;
+      line-height: 38px;
+      margin-bottom: 24px;
+    }
+    @media #{$media-ipad} {
+      font-size: 24px;
+      line-height: 28px;
+      margin-bottom: 16px;
+    }
+  }
+}

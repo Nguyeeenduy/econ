@@ -1,0 +1,47 @@
+@import "/assets/styles/helpers/variables";
+.container {
+  @include display-flex;
+  flex-wrap: nowrap;
+  &Button {
+    font-size: 14px;
+    line-height: 34px;
+    text-align: center;
+    width: 34px;
+    height: 34px;
+    border: 1px solid var(--greyD9Color);
+    border-radius: 2px;
+    margin-right: 8px;
+    cursor: pointer;
+    &Active {
+      font-size: 14px;
+      width: 34px;
+      height: 34px;
+      line-height: 34px;
+      text-align: center;
+      color: var(--greenColor);
+      border-radius: 2px;
+      border: 1px solid var(--greenColor);
+      margin-right: 8px;
+      cursor: pointer;
+    }
+    &Pre {
+      padding: 10px;
+      border: 1px solid var(--greyD9Color);
+      border-radius: 2px;
+      transform: rotate(180deg);
+      margin-right: 8px;
+      cursor: pointer;
+    }
+    &Next {
+      padding: 10px;
+      border: 1px solid var(--greyD9Color);
+      border-radius: 2px;
+      cursor: pointer;
+    }
+  }
+  &Img {
+    position: relative;
+    width: 12px;
+    height: 12px;
+  }
+}

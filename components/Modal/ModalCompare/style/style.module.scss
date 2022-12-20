@@ -1,0 +1,448 @@
+@import "/assets/styles/helpers/variables";
+
+.closeModal {
+  position: fixed;
+  z-index: 1000;
+  top: 100vh;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transition: all 0.3s;
+  background-color: rgba(0, 0, 0, 0.5);
+  @media #{$media-ipad} {
+    display: none;
+  }
+  &Active {
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transition: all 0.3s;
+    background-color: rgba(0, 0, 0, 0.5);
+    @media #{$media-ipad} {
+      display: none;
+    }
+  }
+}
+.container {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  z-index: 1001;
+  bottom: -100vh;
+  height: 71.11111111111111vh;
+  left: 0;
+  right: 0;
+  transition: all 0.3s;
+  background-color: var(--whiteColor);
+  @media #{$media-ipad} {
+    height: 100vh;
+    z-index: 500;
+  }
+  &Active {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    z-index: 1001;
+    bottom: 0;
+    height: 71.11111111111111vh;
+    left: 0;
+    right: 0;
+    transition: all 0.3s;
+    background-color: var(--whiteColor);
+    @media #{$media-ipad} {
+      height: 100vh;
+      z-index: 500;
+    }
+  }
+  &Title {
+    position: relative;
+    padding: 32px 64px;
+    @media #{$media-fullhd} {
+      padding: 28px 52px;
+    }
+    @media #{$media-ipad} {
+      padding: 81px 16px 21px;
+    }
+    &Text {
+      margin: 0;
+      font-size: 24px;
+      line-height: 29px;
+      @media #{$media-ipad} {
+        font-size: 18px;
+        line-height: 22px;
+      }
+    }
+  }
+
+  &Close {
+    position: absolute;
+    padding: 12px;
+    border-radius: 50%;
+    border: 1px solid var(--greenColor);
+    right: 57px;
+    top: -25px;
+    background-color: var(--whiteColor);
+    cursor: pointer;
+    @media #{$media-ipad} {
+      display: none;
+    }
+    &Image {
+      width: 24px;
+      height: 24px;
+      cursor: pointer;
+    }
+  }
+  &Product {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    overflow: auto;
+    margin: 0 64px;
+    border: 2px solid var(--greyF0Color);
+    height: 100%;
+    @media #{$media-fullhd} {
+      margin: 0 52px;
+    }
+    @media #{$media-ipad} {
+      margin: 0;
+    }
+    &Element {
+      display: flex;
+      flex-wrap: nowrap;
+      border-top: 1px solid var(--greyF0Color);
+      border-bottom: 1px solid var(--greyF0Color);
+      &Credit {
+        display: flex;
+        flex-wrap: nowrap;
+      }
+    }
+  }
+  &Criteria {
+    min-width: 25%;
+    width: 25%;
+    padding: 11.5px 16px;
+    font-size: 14px;
+    line-height: 24px;
+    color: var(--blackColor);
+    border-right: 1px solid var(--greyF0Color);
+    @media #{$media-fullhd} {
+      min-width: 35%;
+      width: 35%;
+    }
+    @media #{$media-ipad-pro} {
+      min-width: 48%;
+      width: 48%;
+    }
+    @media #{$media-ipad} {
+      line-height: 20px;
+    }
+    &:nth-child(even) {
+      background-color: var(--greyF0Color);
+    }
+    &Title {
+      margin: 11.5px 16px;
+      font-size: 14px;
+      line-height: 17px;
+      color: var(--black0Color);
+    }
+  }
+  &Plush {
+    padding: 17px 15px;
+    min-width: 25%;
+    width: 25%;
+    border-right: 1px solid var(--greyF0Color);
+    border-bottom: 1px solid var(--greyF0Color);
+    @media #{$media-fullhd} {
+      min-width: 35%;
+      width: 35%;
+    }
+    @media #{$media-ipad-pro} {
+      min-width: 48%;
+      width: 48%;
+    }
+    &Image {
+      width: 60px;
+      height: 60px;
+      margin: 4px 0;
+      cursor: pointer;
+      &:hover {
+        opacity: 0.9;
+      }
+    }
+    &Text {
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 24px;
+      color: var(--blackColor);
+      &Close {
+        font-size: 16px;
+        line-height: 24px;
+        color: var(--blueColor);
+        cursor: pointer;
+        &:hover {
+          color: var(--mainColor);
+        }
+      }
+    }
+    &Input {
+      border: 1px solid var(--greyD9Color);
+      border-radius: 8px;
+      padding: 10px 16px;
+      width: 100%;
+    }
+  }
+  &PlushFixed {
+    position: fixed;
+    display: none;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    top: 65px;
+    z-index: 502;
+    padding: 16px;
+    background-color: var(--whiteColor);
+    @media #{$media-ipad} {
+      display: block;
+    }
+    &Image {
+      width: 60px;
+      height: 60px;
+      margin: 4px 0;
+      cursor: pointer;
+      &:hover {
+        opacity: 0.9;
+      }
+    }
+    &Title {
+      font-size: 18px;
+      line-height: 22px;
+      margin-bottom: 21px;
+    }
+    &Text {
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 24px;
+      color: var(--blackColor);
+      &Close {
+        font-size: 14px;
+        line-height: 24px;
+        color: var(--blueColor);
+        cursor: pointer;
+        &:hover {
+          color: var(--mainColor);
+        }
+      }
+    }
+    &Input {
+      border: 1px solid var(--greyD9Color);
+      border-radius: 8px;
+      padding: 10px 16px;
+      width: 100%;
+    }
+    &Result {
+      position: absolute;
+      top: 43px;
+      left: 0;
+      right: 0;
+      border: 1px solid var(--greyF0Color);
+      height: 400px;
+      overflow-y: auto;
+      &Element {
+        @include display-flex;
+        padding: 16px;
+        border-bottom: 1px solid var(--greyF0Color);
+        background-color: var(--whiteColor);
+        align-items: center;
+        cursor: pointer;
+        &:hover {
+          background-color: var(--greyF5Color);
+        }
+      }
+      &Image {
+        padding-top: 62.01666666666667%;
+        min-width: 60px;
+      }
+      &Text {
+        font-size: 14px;
+        line-height: 24px;
+        margin-left: 13px;
+        color: var(--black0Color);
+      }
+    }
+  }
+}
+.serviceItem {
+  &Container {
+    border-right: 1px solid var(--greyF0Color);
+    border-bottom: 1px solid var(--greyF0Color);
+    min-width: 25%;
+    width: 25%;
+    white-space: pre-line;
+    background: transparent;
+    &:nth-child(even) {
+      background-color: var(--greyF0Color);
+    }
+    @media #{$media-fullhd} {
+      min-width: 35%;
+      width: 35%;
+    }
+    @media #{$media-ipad-pro} {
+      min-width: 48%;
+      width: 48%;
+    }
+  }
+
+  &Credit {
+    padding: 13px;
+    @media #{$media-ipad} {
+      padding: 8px 8px 12px;
+    }
+    &Head {
+      display: flex;
+      justify-content: space-between;
+      gap: 7px;
+      margin-bottom: 18px;
+      &Check {
+        min-width: 24px;
+        height: 24px;
+      }
+      @media #{$media-ipad} {
+        margin-bottom: 8px;
+      }
+    }
+    &Title {
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 24px;
+
+      &Mobile {
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 20px;
+        margin-top: 8px;
+        display: none;
+
+        @media #{$media-ipad} {
+          display: block;
+        }
+      }
+    }
+    &Icon {
+      width: 16px;
+      height: 16px;
+      display: inline-block !important;
+      margin-left: 8px;
+    }
+    &Content {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 16px;
+      @media #{$media-ipad} {
+        margin: 0;
+      }
+      &Left {
+        width: 36.39182692307692%;
+        @media #{$media-ipad} {
+          width: 100%;
+        }
+        &Img {
+          width: 100%;
+        }
+        &Sponsor {
+          position: absolute;
+          text-align: center;
+          color: var(--whiteColor);
+          bottom: 4.5px;
+          right: 8px;
+          background: rgba(0, 0, 0, 0.4);
+          border-radius: 8px;
+          font-size: 10px;
+          line-height: 12px;
+          padding: 2px;
+        }
+      }
+      &Right {
+        width: 61.53846153846154%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        @media #{$media-ipad} {
+          display: none;
+        }
+      }
+      &Rating {
+        font-size: 14px;
+        line-height: 17px;
+        margin: 4px 0;
+      }
+      &Review {
+        font-size: 14px;
+        line-height: 17px;
+        color: #096dd9;
+        margin-top: 4px;
+        cursor: pointer;
+        &:hover {
+          color: var(--blackColor);
+        }
+      }
+    }
+    &Button {
+      width: 100%;
+      margin-top: 16px;
+      border-radius: 8px;
+      color: #fff;
+      padding: 9.5px;
+      background: $basic-color;
+      font-size: 14px;
+      line-height: 17px;
+      text-align: center;
+      cursor: pointer;
+      @media #{$media-ipad} {
+        margin-top: 8px;
+      }
+    }
+    &Text {
+      font-size: 12px;
+      line-height: 15px;
+      color: var(--subContentColor);
+      margin-top: 12px;
+      text-align: center;
+      @media #{$media-ipad} {
+        margin-top: 8px;
+      }
+    }
+  }
+
+  &Name {
+    margin-top: 8px;
+    margin-bottom: 0;
+    text-align: center;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 30px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    @media #{$media-ipad} {
+      font-size: 13px;
+      line-height: 16px;
+      height: 32px;
+    }
+  }
+
+  &Content {
+    font-size: 11px;
+  }
+  #scrollBar::-webkit-scrollbar {
+    width: 6px;
+    background-color: #f5f5f5;
+  }
+  #scrollBar::-webkit-scrollbar-thumb {
+    background-color: #000000;
+  }
+}
